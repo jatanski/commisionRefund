@@ -1,0 +1,72 @@
+@import '../../scss/abstracts/variables';
+
+.menu {
+  position: fixed;
+  min-height: 5vh;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  transition: 0.3s;
+  &__logo {
+    width: 20vw;
+  }
+}
+
+.nav {
+   &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 55vw;
+  }
+
+  &__item {
+    padding: 20px 0;
+
+    &__link {
+      padding-right: 1vw;
+      border-right: 2px solid $gray-light;
+      font-size: 1em;
+      text-transform: uppercase;
+      color: #000;
+      transition: .2s;
+
+      &:hover {
+        color:$color-one;
+      }
+
+      &--noborder {
+        padding-right: .5vw;
+        border-right: none;
+      }
+    }
+
+    &--analize {
+      padding: 20px;
+      background-color: $color-one;
+      font-size: 0.7em;
+      line-height: 2em;
+      transition: .5s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #000;
+      }
+
+      & a {
+        padding-left: 10px;
+        color: white;
+      }
+    }
+
+    &__icon {
+      font-size: 1.8em;
+      color: white;
+    }
+  }
+}
+
+.menu--scroll {
+  background-color: #fff;
+}

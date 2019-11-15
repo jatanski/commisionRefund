@@ -1,0 +1,30 @@
+@import '../../scss/abstracts/mixins';
+@import '../../scss/abstracts/variables';
+
+.header {
+  position: relative;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, #E2E2E2 0%, #EEEEEE 100%);
+  &::before {
+    content: "";
+    display: block;
+    @include centerWithPosition();
+    top: 62vh;
+    width: 200vw;
+    height: 100vh;
+    background-image: url(../../images/background-default.jpg);
+    background-position: center;
+    clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+    }
+  &::after {
+    content: "";
+    display: block;
+    @include centerWithPosition();
+    top: 163vh;
+    background-color: #fff;
+    width: 200vw;
+    height: 200vh;
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+}
