@@ -1,4 +1,5 @@
 @import '../../scss/abstracts/variables';
+@import '../../scss/abstracts/mixins';
 
 .menu {
   position: fixed;
@@ -43,21 +44,7 @@
     }
 
     &--analize {
-      padding: 20px;
-      background-color: $color-one;
-      font-size: 0.7em;
-      line-height: 2em;
-      transition: .5s;
-      cursor: pointer;
-
-      &:hover {
-        background-color: #000;
-      }
-
-      & a {
-        padding-left: 10px;
-        color: white;
-      }
+      @include buttonOne
     }
 
     &__icon {
