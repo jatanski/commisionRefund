@@ -9,7 +9,7 @@ const View = () => {
       <div className="header__main">
         <h2 className="header__main__text header__main__text--first">
           Czy Twój bank poinformował Cię, że należy Ci się{' '}
-          <span className="header__main__text-important">zwrot prowizji</span> z kredytu gotówkowego?
+          <span className="header__main__text--important">zwrot prowizji</span> z kredytu gotówkowego?
         </h2>
         <p className="header__main__text header__main__text--second">
           Jeżeli spłaciłeś przed terminem, skonsolidowałeś lub przeniosłeś do innego banku swój kredyt to uzyskamy dla
