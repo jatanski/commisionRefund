@@ -1,24 +1,24 @@
 @mixin centerWithPosition {
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @mixin buttonOne {
-    padding: 20px;
-    background-color: $color-one;
-    font-size: 0.7em;
-    line-height: 2em;
-    transition: .5s;
-    cursor: pointer;
+  padding: 20px;
+  background-color: $color-one;
+  font-size: 0.7em;
+  line-height: 2em;
+  transition: 0.5s;
+  cursor: pointer;
 
-    &:hover {
-        background-color: #000;
-    }
-    
-     & a {
-        padding-left: 10px;
-        color: white;
-      }
+  &:hover {
+    background-color: #000;
+  }
+
+  & a {
+    padding-left: 10px;
+    color: white;
+  }
 }

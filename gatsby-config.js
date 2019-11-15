@@ -6,6 +6,14 @@ module.exports = {
     author: '@gatsbyjs',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Montserrat:400,600:latin,latin-ext', 'sans-serif'],
+        },
+      },
+    },
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-typescript`,
     'gatsby-plugin-sass',

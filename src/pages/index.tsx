@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header/Header';
 import Nav from '../components/Nav/Nav';
+import ForWho from '../components/ForWho/ForWho';
 
 import '../scss/global.scss';
 
@@ -10,6 +11,7 @@ const IndexPage = () => (
   <>
     <Nav></Nav>
     <Header></Header>
+    <ForWho></ForWho>
   </>
 );
 
