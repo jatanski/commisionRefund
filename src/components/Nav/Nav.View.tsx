@@ -2,7 +2,7 @@ import React from 'react';
 import './nav.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearchDollar } from '@fortawesome/free-solid-svg-icons';
-import Image from './Image';
+import Logo from './Logo';
 
 type ViewProps = {
   navClasses: string;
@@ -12,7 +12,7 @@ const View = ({ navClasses }: ViewProps) => {
   return (
     <section className={navClasses}>
       <div className="menu__logo">
-        <Image></Image>
+        <Logo></Logo>
       </div>
       <nav className="nav">
         <ul className="nav__wrap">

@@ -29,6 +29,9 @@
       position: absolute;
       text-align: right;
       right: 53%;
+      &--important {
+        background-color: $color-one;
+      }
       &--first {
       top: 22%;
       left: 35%;
@@ -77,32 +80,4 @@
   left: 11%;
   font-size: 3em;
   animation: animationArrow infinite 3s both linear;
-}
-
-@keyframes animationArrow {
-  0% {
-    opacity: 0;
-    transform: translateY(-90%);
-  }
-
-  10% {
-    opacity: 1;
-    transform: translateY(-80%);
-  }
-
-  35% {
-    opacity: 1;
-    transform: translateY(0%);
-
-  }
-
-  60% {
-    opacity: 0;
-    transform: translateY(80%);
-  }
-
-  100% {
-    opacity: 0;
-   transform: translateY(80%);
-  }
 }
