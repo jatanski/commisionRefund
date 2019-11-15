@@ -1,5 +1,7 @@
 import React from 'react';
 import './header.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 const View = () => {
   return (
@@ -17,6 +19,9 @@ const View = () => {
           <h3 className="h3">Nawet 10 000 zł!</h3>
           <button className="header__button">Zamów darmową analizę</button>
         </div>
+      </div>
+      <div className="header__animationArrow">
+        <FontAwesomeIcon icon={faArrowDown} />
       </div>
     </section>
   );

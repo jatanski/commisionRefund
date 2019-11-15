@@ -1,5 +1,6 @@
 @import '../../scss/abstracts/mixins';
 @import '../../scss/abstracts/variables';
+@import '../../scss/base/animations';
 
 .header {
   position: relative;
@@ -66,5 +67,42 @@
     height: 200vh;
     -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+}
+
+.header__animationArrow {
+  color: $color-one;
+  position: absolute;
+  top: 78%;
+  left: 11%;
+  font-size: 3em;
+  animation: animationArrow infinite 3s both linear;
+}
+
+@keyframes animationArrow {
+  0% {
+    opacity: 0;
+    transform: translateY(-90%);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(-80%);
+  }
+
+  35% {
+    opacity: 1;
+    transform: translateY(0%);
+
+  }
+
+  60% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+
+  100% {
+    opacity: 0;
+   transform: translateY(80%);
   }
 }
