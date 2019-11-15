@@ -5,7 +5,8 @@
 .header {
   position: relative;
   min-height: 100vh;
-  background-image: linear-gradient(to bottom, #E2E2E2 0%, #EEEEEE 100%);
+  background-image: linear-gradient(to bottom, #e2e2e2 0%, #eeeeee 100%);
+
   &__main {
     @include centerWithPosition();
     top: 62vh;
@@ -14,8 +15,9 @@
     background-image: url(../../images/background-default.jpg);
     background-position: center;
     clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+
     &::before {
-      content: "";
+      content: '';
       display: block;
       height: 100%;
       position: absolute;
@@ -24,52 +26,48 @@
       background-color: #000;
       opacity: 0.92;
     }
+
     &__text {
       color: #fff;
       position: absolute;
       text-align: right;
       right: 53%;
+
       &--important {
         background-color: $color-one;
       }
+
       &--first {
-      top: 22%;
-      left: 35%;
-      font-size: 2em;
-    }
-    &--second {
-      top: 42%;
-      left: 30%;
-      line-height: 1.6em;
-    }
-    &--third {
-      top: 50%;
-      left: 20%;
-      right: 55%;
-      display: flex;
-      justify-content: flex-end;
-      & .h3 {
+        top: 22%;
+        left: 35%;
         font-size: 2em;
-        margin-right: 1vw;
       }
-      & .header__button {
-        @include buttonOne;
-        color: $color-one;
-        background-color: #fff;
+
+      &--second {
+        top: 42%;
+        left: 30%;
+        line-height: 1.6em;
+      }
+
+      &--third {
+        top: 50%;
+        left: 20%;
+        right: 55%;
+        display: flex;
+        justify-content: flex-end;
+
+        & .h3 {
+          font-size: 2em;
+          margin-right: 1vw;
+        }
+
+        & .header__button {
+          @include buttonOne;
+          color: $color-one;
+          background-color: #fff;
+        }
       }
     }
-    }
-  }
-  &::after {
-    content: "";
-    display: block;
-    @include centerWithPosition();
-    top: 163vh;
-    background-color: #fff;
-    width: 200vw;
-    height: 200vh;
-    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   }
 }
 
