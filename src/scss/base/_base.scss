@@ -15,8 +15,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  background-color: green;
-  // width: 100%;
+  background-image: linear-gradient(to bottom, #ffffff 0%, #e2e2e2 100%);
+  min-height: 500vh;
+  cursor: default;
 }
 
 li {
@@ -34,4 +35,8 @@ code {
 
 .bold {
   font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
 }

@@ -2,6 +2,8 @@ import React from 'react';
 import Header from '../components/Header/Header';
 import Nav from '../components/Nav/Nav';
 import ForWho from '../components/ForWho/ForWho';
+import About from '../components/AboutUs/AboutUs';
+import Practice from '../components/Practice/Practice';
 
 import '../scss/global.scss';
 
@@ -9,9 +11,11 @@ import '../scss/global.scss';
 
 const IndexPage = () => (
   <>
-    <Nav></Nav>
-    <Header></Header>
-    <ForWho></ForWho>
+    <Nav />
+    <Header />
+    <ForWho />
+    <About />
+    <Practice />
   </>
 );
 

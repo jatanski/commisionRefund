@@ -1,0 +1,74 @@
+@import '../../scss/abstracts/mixins';
+@import '../../scss/abstracts/variables';
+
+.about {
+  position: relative;
+  min-height: 100vh;
+  &__image {
+    @include centerWithPosition();
+    top: 160vh;
+    width: 200vw;
+    height: 100vh;
+    background-image: url(../../images/background-default.jpg);
+    background-position: center;
+    -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    z-index: -1;
+    filter: grayscale(0.9);
+  }
+
+  &__main {
+    top: 200vh;
+    text-align: center;
+
+    &--title {
+      position: relative;
+      font-weight: bold;
+      letter-spacing: 10px;
+      font-size: 2.4em;
+      margin-bottom: 7vh;
+      top: 185vh;
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+
+      &::after {
+        content: '';
+        height: 1px;
+        background-color: white;
+        width: 10vw;
+        display: block;
+        @include centerWithPosition();
+        top: 200%;
+      }
+    }
+
+    &--button {
+      @include buttonOne();
+      position: relative;
+      top: 210vh;
+      font-size: 1.35em;
+      text-transform: uppercase;
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    &--desc {
+      line-height: 1.75;
+      font-size: 1.5em;
+      letter-spacing: 1px;
+      color: #000;
+      position: relative;
+      top: 205vh;
+      padding: 2vh 10vw;
+      text-align: center;
+
+      &-money {
+        padding: 0.5vh 15vw;
+        font-size: 4em;
+        font-weight: bold;
+      }
+    }
+  }
+}
