@@ -1,10 +1,20 @@
-import React, { Component } from 'react';
-import View from './FAQ.View';
+import React from 'react';
+import Collapse from './FAQ.Collapse';
+import collapseData from './collapse.utils';
 
-class FAQ extends Component {
-  render() {
-    return <View></View>;
-  }
-}
+import './FAQ.scss';
 
-export default FAQ;
+const View = () => {
+  return (
+    <section id="faq" className="faq">
+      <h2 className="faq__title">Najczęściej zadawane pytania:</h2>
+      <div className="faq__questions">
+        {collapseData.map((collapse, i) => (
+          <Collapse key={i} collapse={collapse}></Collapse>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default View;
