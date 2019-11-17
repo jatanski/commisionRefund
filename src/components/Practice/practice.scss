@@ -29,13 +29,6 @@
     text-align: right;
   }
 
-  &__image {
-    transition: 0.3s;
-    &:hover {
-      transform: scale(1.3) rotate(15deg);
-    }
-  }
-
   &__desc {
     padding: 2vh 5vw;
 
