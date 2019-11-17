@@ -1,3 +1,7 @@
+@import './variables';
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap&subset=latin-ext');
+
 @mixin centerWithPosition {
   position: absolute;
   top: 50%;
@@ -6,11 +10,16 @@
 }
 
 @mixin buttonOne {
-  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  padding: 10px;
+  color: white;
   background-color: $color-one;
-  font-size: 0.7em;
-  line-height: 2em;
-  transition: 0.5s;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  transition: 0.3s;
   cursor: pointer;
 
   &:hover {
@@ -34,13 +43,13 @@
   text-transform: uppercase;
 
   &::after {
-    content: '';
-    height: 1px;
-    background-color: #000;
-    width: 10vw;
-    display: block;
     @include centerWithPosition();
+    content: '';
     top: 200%;
+    display: block;
+    height: 1px;
+    width: 10vw;
+    background-color: #000;
   }
 }
 
@@ -52,18 +61,18 @@
 }
 
 @mixin contactFormElementProperties {
+  margin-bottom: 3vh;
+  line-height: 1.4;
   font-size: 1.6em;
   letter-spacing: 2px;
   word-spacing: 4px;
-  line-height: 1.4;
-  margin-bottom: 3vh;
 }
 
 @mixin contactFormTitlesProperties {
+  margin-bottom: 3vh;
+  line-height: 1.4;
   font-weight: bold;
   font-size: 2.2em;
   letter-spacing: 8px;
-  line-height: 1.4;
-  margin-bottom: 3vh;
   text-transform: uppercase;
 }

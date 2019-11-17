@@ -3,19 +3,25 @@
 
 .menu {
   position: fixed;
-  min-height: 5vh;
-  width: 98%;
+  width: 100%;
+  max-height: 7vh;
+  padding-top: 1vh;
   display: flex;
   justify-content: space-between;
+  transition: 0.25s;
   z-index: 1;
-  transition: 0.3s;
+
   &__logo {
     width: 20vw;
+    margin: -1vh 3vw;
+    transition: 0.3s;
   }
 }
 
 .nav {
-   &__wrap {
+  margin-right: 1vw;
+
+  &__wrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -23,37 +29,53 @@
   }
 
   &__item {
-    padding: 20px 0;
+    padding: 20px 0 15px;
+    display: flex;
+    margin: auto 0;
 
     &__link {
       padding-right: 1vw;
       border-right: 2px solid $grey-light;
-      font-size: 1em;
-      text-transform: uppercase;
       color: #000;
-      transition: .2s;
+      font-size: 1em;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: 0.2s;
 
       &:hover {
-        color:$color-one;
+        color: $color-one;
       }
 
       &--noborder {
-        padding-right: .5vw;
+        padding-right: 0.5vw;
         border-right: none;
       }
     }
 
     &--analize {
-      @include buttonOne
+      @include buttonOne;
     }
 
     &__icon {
-      font-size: 1.8em;
+      margin-right: 10px;
+      font-size: 1.4em;
       color: white;
+    }
+
+    &__text {
+      margin: auto 0;
     }
   }
 }
 
 .menu--scroll {
   background-color: #fff;
+
+  & .menu__logo {
+    transform: translate(-20%, -20%) scale(0.7);
+  }
+}
+
+.aaa {
+  margin: auto 0;
 }

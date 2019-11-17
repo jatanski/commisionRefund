@@ -7,9 +7,9 @@
 
   &__image {
     @include centerWithPosition();
-    top: 160vh;
-    width: 200vw;
-    height: 100vh;
+    top: 180vh;
+    width: 220vw;
+    height: 110vh;
     background-image: url(../../images/background-default.jpg);
     background-position: center;
     -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
@@ -24,7 +24,7 @@
 
     &--title {
       position: relative;
-      top: 185vh;
+      top: 200vh;
       margin-bottom: 7vh;
       text-align: center;
       color: white;
@@ -44,31 +44,36 @@
       }
     }
 
-    &--button {
-      @include buttonOne();
-      position: relative;
-      top: 210vh;
-      font-size: 1.35em;
-      text-transform: uppercase;
-      &:hover {
-        color: #fff;
-      }
-    }
-
     &--desc {
       position: relative;
-      top: 205vh;
+      top: 225vh;
       padding: 2vh 10vw;
       text-align: center;
       color: #000;
       line-height: 1.75;
-      font-size: 1.5em;
+      font-size: 1.4em;
       letter-spacing: 1px;
 
       &-money {
-        padding: 0.5vh 15vw;
-        font-size: 4em;
+        padding: 0 15vw;
+        font-size: 3.5em;
         font-weight: bold;
+
+        & .numbers {
+          font-weight: bold;
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    &--button {
+      @include buttonOne();
+      position: relative;
+      top: 229vh;
+      font-size: 1.35em;
+      text-transform: uppercase;
+      &:hover {
+        color: #fff;
       }
     }
   }

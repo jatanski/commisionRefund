@@ -3,13 +3,14 @@
 
 .contact {
   position: relative;
-  top: 220vh;
+  top: 205vh;
+  background-color: #eae8e7;
 
   &__info {
     position: absolute;
-    width: 100%;
+    width: 92%;
     min-height: 100vh;
-    padding: 20vh 5vw;
+    padding: 15vh 5vw;
     background-color: #fff;
     -webkit-clip-path: polygon(100% 0, 0% 100%, 0 0);
     clip-path: polygon(100% 0, 0% 100%, 0 0);
@@ -62,8 +63,7 @@
 
   &__form {
     position: absolute;
-    top: 3vh;
-    width: 100%;
+    width: 92%;
     min-height: 100vh;
     padding: 0 0 5vh 8vw;
     display: flex;
@@ -76,7 +76,7 @@
 
     &__wrap {
       max-width: 800px;
-      margin-right: 10vw;
+      margin-right: 2vw;
     }
 
     &--title {
@@ -167,4 +167,15 @@
 
 .contactForm__link {
   color: $color-one;
+}
+
+// Footer
+
+.contact__footer__text {
+  position: relative;
+  top: 100vh;
+  padding-left: 12vw;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.1em;
 }

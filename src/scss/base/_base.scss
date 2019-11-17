@@ -11,8 +11,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   background-image: linear-gradient(to bottom, #ffffff 0%, #e2e2e2 100%);
-  min-height: 500vh;
   cursor: default;
+  max-height: 500vh;
 }
 
 input[type='checkbox'] {

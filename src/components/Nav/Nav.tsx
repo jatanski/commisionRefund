@@ -6,13 +6,15 @@ const Nav = () => {
   const [navClasses, setNavClasses] = useState('menu');
 
   useEffect(() => {
+    console.log('dupa');
     window.addEventListener('scroll', getScrollPosition);
 
     return window.removeEventListener('scroll', getScrollPosition);
   });
 
   const getScrollPosition = () => {
-    scrollY > 100 ? setNavClasses('menu menu--scroll') : setNavClasses('menu');
+    console.log('działam');
+    scrollY > 0 ? setNavClasses('menu menu--scroll') : setNavClasses('menu');
   };
 
   return <View navClasses={navClasses}></View>;
