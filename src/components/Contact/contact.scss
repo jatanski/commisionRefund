@@ -8,14 +8,14 @@
 
   &__info {
     position: absolute;
-    width: 92%;
+    width: 100%;
     min-height: 100vh;
-    padding: 15vh 5vw;
     background-color: #fff;
     -webkit-clip-path: polygon(100% 0, 0% 100%, 0 0);
     clip-path: polygon(100% 0, 0% 100%, 0 0);
 
     &__wrap {
+      padding: 15vh 5vw;
       max-width: 680px;
       text-transform: uppercase;
     }
@@ -63,9 +63,8 @@
 
   &__form {
     position: absolute;
-    width: 92%;
+    width: 100%;
     min-height: 100vh;
-    padding: 0 0 5vh 8vw;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
@@ -75,6 +74,7 @@
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 
     &__wrap {
+      padding: 2vh 0 5vh 8vw;
       max-width: 800px;
       margin-right: 2vw;
     }
@@ -173,7 +173,7 @@
 
 .contact__footer__text {
   position: relative;
-  top: 100vh;
+  top: 95vh;
   padding-left: 12vw;
   font-weight: bold;
   letter-spacing: 1px;

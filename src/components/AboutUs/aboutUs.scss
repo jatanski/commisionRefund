@@ -70,7 +70,8 @@
       @include buttonOne();
       position: relative;
       top: 229vh;
-      font-size: 1.35em;
+      padding: 20px;
+      font-size: 1.3em;
       text-transform: uppercase;
       &:hover {
         color: #fff;
