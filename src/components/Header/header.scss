@@ -18,20 +18,20 @@
 
     &::before {
       content: '';
-      display: block;
-      height: 100%;
       position: absolute;
+      height: 100%;
       left: 0;
       right: 52%;
+      display: block;
       background-color: #000;
       opacity: 0.92;
     }
 
     &__text {
-      color: #fff;
       position: absolute;
-      text-align: right;
       right: 53%;
+      color: #fff;
+      text-align: right;
 
       &--important {
         background-color: $color-one;
@@ -57,8 +57,8 @@
         justify-content: flex-end;
 
         & .h3 {
-          font-size: 2em;
           margin-right: 1vw;
+          font-size: 2em;
         }
 
         & .header__button {
@@ -72,10 +72,10 @@
 }
 
 .header__animationArrow {
-  color: $color-one;
   position: absolute;
   top: 78%;
   left: 11%;
+  color: $color-one;
   font-size: 3em;
   animation: animationArrow infinite 3s both linear;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import Info from './Contact.Info';
-import Form from './Contact.Form';
+import Info from './Contact.Utils/Contact.Info';
+import Form from './Contact.Utils/Contact.Form';
 
 import './contact.scss';
 

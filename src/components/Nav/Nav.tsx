@@ -1,26 +1,21 @@
 /* eslint-disable no-undef */
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import View from './Nav.View';
 
-class Nav extends Component {
-  state = {
-    navClasses: 'menu',
+const Nav = () => {
+  const [navClasses, setNavClasses] = useState('menu');
+
+  useEffect(() => {
+    window.addEventListener('scroll', getScrollPosition);
+
+    return window.removeEventListener('scroll', getScrollPosition);
+  });
+
+  const getScrollPosition = () => {
+    scrollY > 100 ? setNavClasses('menu menu--scroll') : setNavClasses('menu');
   };
 
-  componentDidMount = () => {
-    window.addEventListener('scroll', this.getScrollPosition);
-  };
-
-  componentWillUnmount = () => {
-    window.removeEventListener('scroll', this.getScrollPosition);
-  };
-
-  getScrollPosition = () => {
-    scrollY > 100 ? this.setState({ navClasses: 'menu menu--scroll' }) : this.setState({ navClasses: 'menu' });
-  };
-  render() {
-    return <View navClasses={this.state.navClasses}></View>;
-  }
-}
+  return <View navClasses={navClasses}></View>;
+};
 
 export default Nav;

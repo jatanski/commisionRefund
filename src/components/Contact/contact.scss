@@ -9,11 +9,10 @@
     position: absolute;
     width: 100%;
     min-height: 100vh;
-    padding: 5vh 5vw;
-    padding-top: 20vh;
+    padding: 20vh 5vw;
+    background-color: #fff;
     -webkit-clip-path: polygon(100% 0, 0% 100%, 0 0);
     clip-path: polygon(100% 0, 0% 100%, 0 0);
-    background-color: #fff;
 
     &__wrap {
       max-width: 680px;
@@ -43,14 +42,14 @@
 
     &--social {
       & .social__element {
-        background-color: lightgray;
-        color: #fff;
         display: inline-block;
         height: 7vh;
         width: 7vh;
-        line-height: 7vh;
-        text-align: center;
         margin: 1vh;
+        background-color: lightgray;
+        color: #fff;
+        text-align: center;
+        line-height: 7vh;
         font-size: 1.7em;
         transition: 0.25s linear;
 
@@ -63,18 +62,17 @@
 
   &__form {
     position: absolute;
-    padding: 0 0 5vh 8vw;
     top: 3vh;
     width: 100%;
     min-height: 100vh;
-    -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-    background-color: #eae8e7;
-
+    padding: 0 0 5vh 8vw;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
     align-items: flex-end;
+    background-color: #eae8e7;
+    -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 
     &__wrap {
       max-width: 800px;
@@ -96,8 +94,8 @@
         & .contactInput {
           border: none;
           border-bottom: 2px solid #fff;
-          background-color: transparent;
           padding: 20px 0;
+          background-color: transparent;
           font-size: 1.25em;
         }
 

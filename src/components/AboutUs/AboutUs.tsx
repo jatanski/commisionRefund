@@ -10,11 +10,11 @@ const View = () => {
         <h2 className="about__main--title">Czym się zajmujemy?</h2>
         <p className="about__main--desc">
           Nasza firma zajmuje się <span className="bold">odzyskiwaniem prowizji bankowych</span> z kredytów
-          konsumenckich. <br /> Oferta dotyczy{' '}
+          konsumenckich. <br /> Oferta dotyczy
           <span className="underline">odkupienia praw do rozliczeń finansowych</span> umów kredytów/pożyczek.
         </p>
         <p className="about__main--desc">
-          Dzięki takiemu rozwiązaniu klient otrzymuje pieniądze na swoje konto{' '}
+          Dzięki takiemu rozwiązaniu klient otrzymuje pieniądze na swoje konto
           <span className="bold">do 7 dni od pierwszego kontaktu</span> z nami, <br /> bez konieczności czekania wielu
           miesięcy, a nawet lat na rozstrzygnięcie sprawy w sądzie.
         </p>
