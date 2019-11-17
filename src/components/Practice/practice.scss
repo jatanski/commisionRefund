@@ -9,24 +9,7 @@
   background-color: #fff;
 
   &__title {
-    position: relative;
-    font-weight: bold;
-    letter-spacing: 10px;
-    font-size: 2.4em;
-    margin-bottom: 7vh;
-    text-align: center;
-    color: #000;
-    text-transform: uppercase;
-
-    &::after {
-      content: '';
-      height: 1px;
-      background-color: #000;
-      width: 10vw;
-      display: block;
-      @include centerWithPosition();
-      top: 200%;
-    }
+    @include sectionTitle();
   }
 
   &__main {
