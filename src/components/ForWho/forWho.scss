@@ -3,10 +3,10 @@
 
 .forWho {
   @include centerWithPosition();
-  top: 163vh;
+  top: 179vh;
+  width: 220vw;
+  height: 210vh;
   background-color: #fff;
-  width: 200vw;
-  height: 200vh;
   -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
@@ -14,30 +14,25 @@
 .forWho {
   &__about {
     position: absolute;
-    top: 8%;
+    top: 10%;
     left: 38%;
     right: 38%;
     text-align: center;
     text-transform: uppercase;
 
-    &--extra {
-      color: $grey-medium;
-      margin-bottom: 2vh;
-      letter-spacing: 5px;
-    }
-
     &--title {
+      color: $color-one;
       line-height: 2;
       font-size: 2.4em;
-      color: $color-one;
       font-weight: bold;
     }
 
     &--desc {
+      color: $color-two;
       line-height: 1.75;
       font-size: 0.9em;
       letter-spacing: 1px;
-      color: $color-two;
+      font-weight: bold;
     }
   }
 
@@ -45,7 +40,7 @@
 
   &__clients {
     position: absolute;
-    top: 22%;
+    top: 24%;
     left: 31%;
     right: 31%;
     text-align: center;
@@ -53,19 +48,19 @@
 
     &--title {
       position: relative;
+      margin-bottom: 7vh;
       font-weight: bold;
       letter-spacing: 10px;
       font-size: 2em;
-      margin-bottom: 7vh;
 
       &::after {
+        @include centerWithPosition();
         content: '';
+        display: block;
+        top: 200%;
         height: 1px;
         background-color: $grey-medium;
         width: 10vw;
-        display: block;
-        @include centerWithPosition();
-        top: 200%;
       }
     }
   }
@@ -93,7 +88,7 @@
 
 .forWho__commision {
   position: absolute;
-  top: 62%;
+  top: 64%;
   left: 31%;
   right: 31%;
   text-align: center;
@@ -101,31 +96,31 @@
 
   &--title {
     position: relative;
+    margin-bottom: 7vh;
     font-weight: bold;
     letter-spacing: 10px;
     font-size: 2em;
-    margin-bottom: 7vh;
 
     &::after {
-      content: '';
-      height: 1px;
-      background-color: $grey-medium;
-      width: 10vw;
-      display: block;
       @include centerWithPosition();
+      content: '';
       top: 200%;
+      display: block;
+      height: 1px;
+      width: 10vw;
+      background-color: $grey-medium;
     }
   }
 
   &--desc {
-    letter-spacing: 1px;
     padding: 2vh 5vw;
+    letter-spacing: 1px;
     text-transform: none;
     font-size: 1.2em;
   }
 
   &--button {
-    margin-top: 3vh;
     @include buttonOne();
+    margin-top: 3vh;
   }
 }

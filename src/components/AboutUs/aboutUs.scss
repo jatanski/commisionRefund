@@ -4,11 +4,12 @@
 .about {
   position: relative;
   min-height: 100vh;
+
   &__image {
     @include centerWithPosition();
-    top: 160vh;
-    width: 200vw;
-    height: 100vh;
+    top: 180vh;
+    width: 220vw;
+    height: 110vh;
     background-image: url(../../images/background-default.jpg);
     background-position: center;
     -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
@@ -23,51 +24,57 @@
 
     &--title {
       position: relative;
-      font-weight: bold;
-      letter-spacing: 10px;
-      font-size: 2.4em;
+      top: 200vh;
       margin-bottom: 7vh;
-      top: 185vh;
       text-align: center;
       color: white;
+      font-weight: bold;
+      font-size: 2.4em;
+      letter-spacing: 10px;
       text-transform: uppercase;
 
       &::after {
-        content: '';
-        height: 1px;
-        background-color: white;
-        width: 10vw;
-        display: block;
         @include centerWithPosition();
+        content: '';
         top: 200%;
+        display: block;
+        height: 1px;
+        width: 10vw;
+        background-color: white;
+      }
+    }
+
+    &--desc {
+      position: relative;
+      top: 225vh;
+      padding: 2vh 10vw;
+      text-align: center;
+      color: #000;
+      line-height: 1.75;
+      font-size: 1.4em;
+      letter-spacing: 1px;
+
+      &-money {
+        padding: 0 15vw;
+        font-size: 3.5em;
+        font-weight: bold;
+
+        & .numbers {
+          font-weight: bold;
+          font-size: 1.2em;
+        }
       }
     }
 
     &--button {
       @include buttonOne();
       position: relative;
-      top: 210vh;
-      font-size: 1.35em;
+      top: 229vh;
+      padding: 20px;
+      font-size: 1.3em;
       text-transform: uppercase;
       &:hover {
         color: #fff;
-      }
-    }
-
-    &--desc {
-      line-height: 1.75;
-      font-size: 1.5em;
-      letter-spacing: 1px;
-      color: #000;
-      position: relative;
-      top: 205vh;
-      padding: 2vh 10vw;
-      text-align: center;
-
-      &-money {
-        padding: 0.5vh 15vw;
-        font-size: 4em;
-        font-weight: bold;
       }
     }
   }

@@ -38,17 +38,17 @@ const View = ({ navClasses }: ViewProps) => {
               FAQ
             </a>
           </li>
-          <li className="nav__item nav__item">
+          <li className="nav__item">
             <a className="nav__item__link nav__item__link--noborder" href="#contact">
               Kontakt
             </a>
           </li>
-          <li className="nav__item nav__item--analize">
-            <FontAwesomeIcon className="nav__item__icon" icon={faSearchDollar} />
-            <a className="nav__item__link nav__item__link--noborder" href="">
-              Darmowa Analiza
-            </a>
-          </li>
+          <a className="aaa" href="#contact">
+            <li className="nav__item nav__item--analize">
+              <FontAwesomeIcon className="nav__item__icon" icon={faSearchDollar} />
+              <p className="nav__item__text">Darmowa Analiza</p>
+            </li>
+          </a>
         </ul>
       </nav>
     </section>

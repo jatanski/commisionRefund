@@ -10,7 +10,7 @@ import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `pl`,
   meta: [],
   description: ``,
 };

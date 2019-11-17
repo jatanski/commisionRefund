@@ -29,7 +29,6 @@ const Commision = () => {
         <br />
         Klientowi zostaje jedynie droga sądowa.
       </p>
-      <button className="forWho__commision--button">Dowiedz się więcej</button>
     </div>
   );
 };
