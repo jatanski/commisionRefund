@@ -50,3 +50,20 @@
     outline: none;
   }
 }
+
+@mixin contactFormElementProperties {
+  font-size: 1.6em;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  line-height: 1.4;
+  margin-bottom: 3vh;
+}
+
+@mixin contactFormTitlesProperties {
+  font-weight: bold;
+  font-size: 2.2em;
+  letter-spacing: 8px;
+  line-height: 1.4;
+  margin-bottom: 3vh;
+  text-transform: uppercase;
+}

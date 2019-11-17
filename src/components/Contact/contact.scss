@@ -1,0 +1,172 @@
+@import '../../scss/abstracts/mixins';
+@import '../../scss/abstracts/variables';
+
+.contact {
+  position: relative;
+  top: 220vh;
+
+  &__info {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    padding: 5vh 5vw;
+    padding-top: 20vh;
+    -webkit-clip-path: polygon(100% 0, 0% 100%, 0 0);
+    clip-path: polygon(100% 0, 0% 100%, 0 0);
+    background-color: #fff;
+
+    &__wrap {
+      max-width: 680px;
+      text-transform: uppercase;
+    }
+
+    &--title {
+      @include contactFormTitlesProperties();
+    }
+
+    &--adress {
+      @include contactFormElementProperties();
+    }
+
+    &--telAndMail {
+      @include contactFormElementProperties();
+      color: $color-one;
+
+      & * {
+        font-weight: bold;
+      }
+
+      & svg {
+        margin-right: 1vw;
+      }
+    }
+
+    &--social {
+      & .social__element {
+        background-color: lightgray;
+        color: #fff;
+        display: inline-block;
+        height: 7vh;
+        width: 7vh;
+        line-height: 7vh;
+        text-align: center;
+        margin: 1vh;
+        font-size: 1.7em;
+        transition: 0.25s linear;
+
+        &:hover {
+          background-color: $color-one;
+        }
+      }
+    }
+  }
+
+  &__form {
+    position: absolute;
+    padding: 0 0 5vh 8vw;
+    top: 3vh;
+    width: 100%;
+    min-height: 100vh;
+    -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    background-color: #eae8e7;
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &__wrap {
+      max-width: 800px;
+      margin-right: 10vw;
+    }
+
+    &--title {
+      @include contactFormTitlesProperties();
+      margin-bottom: 1vh;
+    }
+
+    & .contactForm {
+      display: flex;
+      flex-wrap: wrap;
+
+      &__inputWrap {
+        width: 50%;
+
+        & .contactInput {
+          border: none;
+          border-bottom: 2px solid #fff;
+          background-color: transparent;
+          padding: 20px 0;
+          font-size: 1.25em;
+        }
+
+        &--checkbox {
+          margin-top: 2vh;
+          font-size: 0.9em;
+
+          & .checkbox__input {
+            display: none;
+
+            &:checked + label:before {
+              width: 10px;
+              top: -5px;
+              left: 5px;
+              border-radius: 0;
+              opacity: 1;
+              border-top-color: transparent;
+              border-left-color: transparent;
+              -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+            }
+          }
+
+          & .checkbox__label {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+
+            &:before {
+              content: '';
+              display: block;
+              width: 20px;
+              height: 20px;
+              border: 2px solid $color-one;
+              position: absolute;
+              left: 0;
+              top: 0;
+              opacity: 0.6;
+              -webkit-transition: all 0.12s, border-color 0.08s;
+              transition: all 0.12s, border-color 0.08s;
+            }
+          }
+        }
+      }
+
+      &__button {
+        background-color: $color-one;
+        color: #fff;
+        padding: 20px;
+        border: none;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.3s ease-out;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #000;
+        }
+      }
+    }
+  }
+}
+
+.contactForm__link {
+  color: $color-one;
+}

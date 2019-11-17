@@ -2,16 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600&display=swap&subset=latin-ext');
 
-* {
-  margin: 0;
-  padding: 0;
-  border: none;
-  font-family: 'Raleway', sans-serif;
-  font-weight: normal;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -20,17 +15,8 @@ body {
   cursor: default;
 }
 
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+input[type='checkbox'] {
+  cursor: pointer;
 }
 
 .bold {

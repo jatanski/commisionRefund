@@ -11,33 +11,35 @@ type ViewProps = {
 const View = ({ navClasses }: ViewProps) => {
   return (
     <section className={navClasses}>
-      <div className="menu__logo">
-        <Logo></Logo>
-      </div>
+      <a href="#header">
+        <div className="menu__logo">
+          <Logo></Logo>
+        </div>
+      </a>
       <nav className="nav">
         <ul className="nav__wrap">
           <li className="nav__item">
-            <a className="nav__item__link" href="">
+            <a className="nav__item__link" href="#forWho">
               Dla kogo?
             </a>{' '}
           </li>
           <li className="nav__item">
-            <a className="nav__item__link" href="">
+            <a className="nav__item__link" href="#aboutUs">
               Czym się zajmujemy?
             </a>
           </li>
           <li className="nav__item">
-            <a className="nav__item__link" href="">
+            <a className="nav__item__link" href="#practice">
               Jak to wygląda w praktyce?
             </a>
           </li>
           <li className="nav__item">
-            <a className="nav__item__link" href="">
+            <a className="nav__item__link" href="#faq">
               FAQ
             </a>
           </li>
           <li className="nav__item nav__item">
-            <a className="nav__item__link nav__item__link--noborder" href="">
+            <a className="nav__item__link nav__item__link--noborder" href="#contact">
               Kontakt
             </a>
           </li>
