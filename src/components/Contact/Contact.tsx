@@ -1,6 +1,6 @@
 import React from 'react';
 import Info from './Contact.Utils/Contact.Info';
-import Form from './Contact.Utils/Contact.Form';
+import Form from './Contact.Utils/COntact.Form';
 import Footer from './Contact.Utils/Contact.Footer';
 
 import './contact.scss';

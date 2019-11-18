@@ -7,18 +7,15 @@
 
   &__image {
     @include centerWithPosition();
-    top: 180vh;
+    top: 185vh;
     width: 220vw;
     height: 110vh;
     background-image: url(../../images/hands.jpg);
-    background-position: center -70%;
-    // background-size: contain;
+    background-position: center -60%;
     background-repeat: no-repeat;
-    // background-attachment: fixed;
     -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
     clip-path: polygon(50% 100%, 0 0, 100% 0);
     z-index: -1;
-    // filter: grayscale(0.9);
   }
 
   &__main {
@@ -27,7 +24,7 @@
 
     &--title {
       position: relative;
-      top: 200vh;
+      top: 205vh;
       margin: 0 30vw 7vh;
       text-align: center;
       color: #111;
@@ -50,7 +47,7 @@
 
     &--desc {
       position: relative;
-      top: 225vh;
+      top: 230vh;
       padding: 2vh 10vw;
       text-align: center;
       color: #000;

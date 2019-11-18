@@ -3,12 +3,18 @@
 
 .forWho {
   @include centerWithPosition();
-  top: 179vh;
-  width: 220vw;
-  height: 210vh;
-  background-color: #fff;
-  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  top: 182vh;
+  overflow: hidden;
+  max-width: 100%;
+  &__wrap {
+    position: relative;
+    left: -60vw;
+    width: 220vw;
+    height: 220vh;
+    background-color: #fff;
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
 }
 
 .forWho {
@@ -19,6 +25,7 @@
     right: 38%;
     text-align: center;
     text-transform: uppercase;
+    animation: showForWhoFirst 2s;
 
     &--title {
       color: $color-one;
