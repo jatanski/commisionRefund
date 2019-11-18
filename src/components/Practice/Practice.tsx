@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './practice.scss';
 // @ts-ignore
 import IconFile from '../../images/practice-icons/file-1.png';
@@ -9,7 +10,7 @@ import IconNotepad from '../../images/practice-icons/notepad-1.png';
 // @ts-ignore
 import IconMoney from '../../images/practice-icons/notes.png';
 
-const View = () => {
+const Practice = () => {
   return (
     <section id="practice" className="practice">
       <h2 className="practice__title">Jak wygląda cały proces?</h2>
@@ -78,4 +79,4 @@ const View = () => {
   );
 };
 
-export default View;
+export default Practice;

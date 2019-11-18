@@ -7,15 +7,15 @@
 
   &__image {
     @include centerWithPosition();
-    top: 180vh;
+    top: 185vh;
     width: 220vw;
     height: 110vh;
-    background-image: url(../../images/background-default.jpg);
-    background-position: center;
+    background-image: url(../../images/hands.jpg);
+    background-position: center -60%;
+    background-repeat: no-repeat;
     -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
     clip-path: polygon(50% 100%, 0 0, 100% 0);
     z-index: -1;
-    filter: grayscale(0.9);
   }
 
   &__main {
@@ -24,10 +24,11 @@
 
     &--title {
       position: relative;
-      top: 200vh;
-      margin-bottom: 7vh;
+      top: 205vh;
+      margin: 0 30vw 7vh;
       text-align: center;
-      color: white;
+      color: #111;
+      background-color: rgba(265, 265, 265, 0.7);
       font-weight: bold;
       font-size: 2.4em;
       letter-spacing: 10px;
@@ -46,7 +47,7 @@
 
     &--desc {
       position: relative;
-      top: 225vh;
+      top: 230vh;
       padding: 2vh 10vw;
       text-align: center;
       color: #000;

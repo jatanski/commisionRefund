@@ -8,9 +8,11 @@ import './forWho.scss';
 const View = () => {
   return (
     <section id="forWho" className="forWho">
-      <About></About>
-      <Clients></Clients>
-      <Commision></Commision>
+      <div className="forWho__wrap">
+        <About></About>
+        <Clients></Clients>
+        <Commision></Commision>
+      </div>
     </section>
   );
 };

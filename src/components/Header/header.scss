@@ -5,15 +5,15 @@
 .header {
   position: relative;
   min-height: 100vh;
-  background-image: linear-gradient(to bottom, #e2e2e2 0%, #eeeeee 100%);
+  background-image: linear-gradient(to bottom, #e8e8e8 0%, #eeeeee 100%);
 
   &__main {
     @include centerWithPosition();
     top: 67vh;
     width: 220vw;
     height: 110vh;
-    background-image: url(../../images/background-default.jpg);
-    background-position: center;
+    background-image: url(../../images/start2.jpg);
+    background-position: 50% 90%;
     clip-path: polygon(50% 0, 0% 100%, 100% 100%);
 
     &::before {
@@ -33,6 +33,7 @@
       color: #fff;
       text-align: right;
       letter-spacing: 1px;
+      animation: showHeaderText 2s;
 
       &--important {
         background-color: $color-one;

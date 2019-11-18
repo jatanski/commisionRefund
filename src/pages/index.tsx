@@ -13,13 +13,15 @@ import '../scss/global.scss';
 
 const IndexPage = () => (
   <>
-    <Nav />
-    <Header />
-    <ForWho />
-    <About />
-    <Practice />
-    <FAQ />
-    <Contact />
+    <div className="wrapper">
+      <Nav />
+      <Header />
+      <ForWho />
+      <About />
+      <Practice />
+      <FAQ />
+      <Contact />
+    </div>
   </>
 );
 

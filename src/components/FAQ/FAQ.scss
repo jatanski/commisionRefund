@@ -1,21 +1,34 @@
 @import '../../scss/abstracts/mixins';
 @import '../../scss/abstracts/variables';
+@import '../../scss/base/animations';
 
 .faq {
   position: relative;
   top: 200vh;
-  padding: 7vh 10vw;
+  background-image: url(../../images/hammer2.jpg);
+  background-color: #000;
+  filter: blur(0.8);
+
+  &__wrap {
+    padding: 7vh 10vw;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
 
   &__title {
     @include sectionTitle();
+    color: #eee;
     margin-bottom: 12vh;
+
+    &::after {
+      background-color: #eee;
+    }
   }
 
   &__questions {
     &__element {
       margin-bottom: 1.5vh;
       padding-bottom: 10px;
-      background-color: $color-one;
+      background-color: rgba(265, 265, 265, 0.8);
       cursor: pointer;
 
       &--title {
@@ -43,7 +56,7 @@
         & .desc__element {
           margin-bottom: 2.5%;
           line-height: 1.3;
-          font-size: 1em;
+          font-size: 1.1em;
         }
       }
     }

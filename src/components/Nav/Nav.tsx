@@ -8,10 +8,11 @@ const Nav = () => {
   useEffect(() => {
     window.addEventListener('scroll', getScrollPosition);
 
-    return window.removeEventListener('scroll', getScrollPosition);
+    // return document.body.removeEventListener('scroll', getScrollPosition);
   });
 
   const getScrollPosition = () => {
+    console.log('jo');
     scrollY > 0 ? setNavClasses('menu menu--scroll') : setNavClasses('menu');
   };
 

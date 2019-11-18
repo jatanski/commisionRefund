@@ -7,11 +7,13 @@ import './FAQ.scss';
 const View = () => {
   return (
     <section id="faq" className="faq">
-      <h2 className="faq__title">Najczęściej zadawane pytania:</h2>
-      <div className="faq__questions">
-        {collapseData.map((collapse, i) => (
-          <Collapse key={i} collapse={collapse}></Collapse>
-        ))}
+      <div className="faq__wrap">
+        <h2 className="faq__title">Najczęściej zadawane pytania:</h2>
+        <div className="faq__questions">
+          {collapseData.map((collapse, i) => (
+            <Collapse key={i} collapse={collapse}></Collapse>
+          ))}
+        </div>
       </div>
     </section>
   );

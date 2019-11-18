@@ -3,7 +3,7 @@ import './header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
-const View = () => {
+const Header = () => {
   return (
     <section id="header" className="header">
       <div className="header__main">
@@ -29,4 +29,4 @@ const View = () => {
   );
 };
 
-export default View;
+export default Header;
