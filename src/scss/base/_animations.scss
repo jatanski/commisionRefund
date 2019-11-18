@@ -24,3 +24,13 @@
     transform: translateY(80%);
   }
 }
+
+@keyframes showHeaderText {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
