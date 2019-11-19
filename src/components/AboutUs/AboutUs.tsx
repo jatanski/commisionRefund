@@ -1,35 +1,26 @@
-import React from 'react';
+/* eslint-disable no-undef */
+import React, { useState, useEffect } from 'react';
+import utilClass from '../../utilClass';
 
-import './aboutUs.scss';
+import View from './AboutUs.View';
 
-const View = () => {
-  return (
-    <section className="about">
-      <div className="about__image"></div>
-      <div className="about__main">
-        <h2 id="aboutUs" className="about__main--title">
-          Czym się zajmujemy?
-        </h2>
-        <p className="about__main--desc">
-          Nasza firma zajmuje się <span className="bold">odzyskiwaniem prowizji bankowych</span> z kredytów
-          konsumenckich. <br /> Oferta dotyczy
-          <span className="underline">odkupienia praw do rozliczeń finansowych</span> umów kredytów/pożyczek.
-        </p>
-        <p className="about__main--desc">
-          Dzięki takiemu rozwiązaniu klient otrzymuje pieniądze na swoje konto
-          <span className="bold">do 7 dni od pierwszego kontaktu</span> z nami, <br /> bez konieczności czekania wielu
-          miesięcy, a nawet lat na rozstrzygnięcie sprawy w sądzie.
-        </p>
-        <p className="about__main--desc about__main--desc-money">
-          <span className="numbers">12 000</span> PLN
-        </p>
-        <p className="about__main--desc underline"> Nawet taką kwotę wypłacimy Ci w 24h</p>
-        <a href="#contact">
-          <button className="about__main--button">Zamów darmową analizę Twojego zwrotu</button>
-        </a>
-      </div>
-    </section>
-  );
+const AboutUs = () => {
+  const [titleClass, setTitleClass] = useState('about__main--title');
+  const [descClass, setDescClass] = useState('about__main--desc');
+
+  const showAbout = () => {
+    console.log(scrollY);
+
+    scrollY >= 2100 ? setTitleClass('about__main--title showElement') : setTitleClass('about__main--title');
+
+    scrollY >= 2400 ? setDescClass('about__main--desc showElement') : setDescClass('about__main--desc');
+  };
+
+  useEffect(() => {
+    utilClass.addMethodsToScrollEvent([showAbout]);
+  });
+
+  return <View titleClass={titleClass} descClass={descClass}></View>;
 };
 
-export default View;
+export default AboutUs;

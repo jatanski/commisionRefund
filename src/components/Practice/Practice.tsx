@@ -1,82 +1,29 @@
-import React from 'react';
+/* eslint-disable no-undef */
+import React, { useState, useEffect } from 'react';
+import utilClass from '../../utilClass';
+
+import View from './Practice.View';
 
 import './practice.scss';
-// @ts-ignore
-import IconFile from '../../images/practice-icons/file-1.png';
-// @ts-ignore
-import IconSupport from '../../images/practice-icons/support.png';
-// @ts-ignore
-import IconNotepad from '../../images/practice-icons/notepad-1.png';
-// @ts-ignore
-import IconMoney from '../../images/practice-icons/notes.png';
 
 const Practice = () => {
-  return (
-    <section id="practice" className="practice">
-      <h2 className="practice__title">Jak wygląda cały proces?</h2>
-      <div className="practice__main">
-        <div className="practice__main__element element--left">
-          <div className="element__image">
-            <img src={IconNotepad} alt="" />
-          </div>
-          <div className="element__desc">
-            <h3 className="element__desc--title">Wypełnij formularz kontaktowy</h3>
-            <p className="element__desc--text">
-              Skontaktuj się z nami za pomocą formularza kontaktowego, dostępnego na dole tej strony.
-            </p>
-          </div>
-        </div>
-        <div className="practice__main__element element--right">
-          <div className="element__image">
-            <img src={IconSupport} alt="" />
-          </div>
-          <div className="element__desc">
-            <h3 className="element__desc--title">Rozmowa z naszym konsultantem</h3>
-            <p className="element__desc--text">
-              Na tym etapie będziemy potrzebowali informacji na temat kredytów, które posiadałeś. Nasz konsultant
-              wyjaśni Ci dosłownie wszystko i odpowie na każde pytanie.
-            </p>
-          </div>
-        </div>
-        <div className="practice__main__element element--left">
-          <div className="element__image">
-            <img src={IconFile} alt="" />
-          </div>
-          <div className="element__desc">
-            <h3 className="element__desc--title">Przesłanie dokumentów i analiza</h3>
-            <p className="element__desc--text">
-              Na podstawie przesłanych do nas drogą mailową dokumentów, nasi pracownicy dokonają dokładnej analizy oraz
-              obliczą ile przysługuje Ci zwrotu.
-              <span className="element__desc--text--extra">
-                Jeszcze tego samego dnia poznasz ostateczną propozycję z wyceną!
-              </span>
-            </p>
-          </div>
-        </div>
-        <div className="practice__main__element element--right">
-          <div className="element__image">
-            <img src={IconMoney} alt="" />
-          </div>
-          <div className="element__desc">
-            <h3 className="element__desc--title">Podpisanie umowy i wypłata</h3>
-            <p className="element__desc--text">
-              <span className="element__desc--text--multitext">
-                Po akceptacji kwoty odkupu wierzytelności, wygenerowane dokumenty wysyłamy do Ciebie na e-mail.
-              </span>
-              <span className="element__desc--text--multitext">
-                Następnie dokumenty należy wydrukować i wysłać do nas pocztą. Gdy tylko otrzymamy podpisaną umowę,
-                zlecamy wypłatę środków.
-              </span>
-              <span className="element__desc--text--multitext">
-                {' '}
-                Pieniądze trafiają do Ciebie w ciągu 24 godzin od momentu otrzymania podpisanych dokumentów.
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+  const [titleClass, setTitleClass] = useState('practice__title');
+  const [elementClass, setElementClass] = useState('practice__main__element');
+
+  const showAbout = () => {
+    console.log(scrollY);
+
+    scrollY >= 3100 ? setTitleClass('practice__title showElement') : setTitleClass('practice__title');
+
+    scrollY >= 3300
+      ? setElementClass('practice__main__element showElement')
+      : setElementClass('practice__main__element');
+  };
+
+  useEffect(() => {
+    utilClass.addMethodsToScrollEvent([showAbout]);
+  });
+  return <View titleClass={titleClass} elementClass={elementClass}></View>;
 };
 
 export default Practice;

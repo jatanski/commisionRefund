@@ -80,3 +80,10 @@
     }
   }
 }
+
+.about__main--title,
+.about__main--desc {
+  opacity: 0;
+  // transform: translateX(-10%);
+  transition: 1s;
+}

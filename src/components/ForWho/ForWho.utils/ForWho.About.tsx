@@ -1,8 +1,9 @@
 import React from 'react';
+import { Props } from '../ForWho';
 
-const About = () => {
+const About = ({ classes }: Props) => {
   return (
-    <div className="forWho__about">
+    <div className={classes}>
       {/* <h3 className="forWho__about--extra">- Results -</h3> */}
       <h2 className="forWho__about--title">Gwarancja</h2>
       <p className="forWho__about--desc">

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Props } from '../ForWho';
+
 // @ts-ignore
 import IconCash from '../../../images/clients-icons/cash.png';
 // @ts-ignore
@@ -12,9 +14,9 @@ import IconMoney from '../../../images/clients-icons/get-money.png';
 // @ts-ignore
 import IconTrouble from '../../../images/clients-icons/problem.png';
 
-const Clients = () => {
+const Clients = ({ classes }: Props) => {
   return (
-    <div className="forWho__clients">
+    <div className={classes}>
       <h2 className="forWho__clients--title">Pomagamy osobom które:</h2>
       <ul className="clients__list">
         <li className="clients__element">
