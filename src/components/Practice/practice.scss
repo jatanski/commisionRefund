@@ -70,3 +70,10 @@
     }
   }
 }
+
+.practice__title,
+.practice__main__element {
+  opacity: 0;
+  // transform: translateX(-10%);
+  transition: 1s;
+}

@@ -1,8 +1,9 @@
 import React from 'react';
+import { Props } from '../ForWho';
 
-const Commision = () => {
+const Commision = ({ classes }: Props) => {
   return (
-    <div className="forWho__commision">
+    <div className={classes}>
       <h3 className="forWho__commision--title">Czym jest prowizja bankowa?</h3>
       <p className="forWho__commision--desc">
         <span className="bold">Prowizja to istotny </span>

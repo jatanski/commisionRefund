@@ -20,12 +20,11 @@
 .forWho {
   &__about {
     position: absolute;
-    top: 10%;
+    top: 9%;
     left: 38%;
     right: 38%;
     text-align: center;
     text-transform: uppercase;
-    animation: showForWhoFirst 2s;
 
     &--title {
       color: $color-one;
@@ -130,4 +129,12 @@
     @include buttonOne();
     margin-top: 3vh;
   }
+}
+
+.forWho__clients,
+.forWho__about,
+.forWho__commision {
+  opacity: 0;
+  // transform: translateX(-10%);
+  transition: 1s;
 }
