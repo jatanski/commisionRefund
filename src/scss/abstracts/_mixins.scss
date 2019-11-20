@@ -22,6 +22,10 @@
   transition: 0.3s;
   cursor: pointer;
 
+  @media (max-width: 1440px) {
+    font-size: 0.75em;
+  }
+
   &:hover {
     background-color: #000;
   }
@@ -50,6 +54,24 @@
     height: 1px;
     width: 10vw;
     background-color: #000;
+
+    @media (max-width: 440px) {
+      top: 150%;
+      width: 40vw;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    font-size: 2.1em;
+  }
+
+  @media (max-width: 1360px) {
+    font-size: 1.9em;
+    margin-bottom: 5vh;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 1.7em;
   }
 }
 
@@ -66,6 +88,26 @@
   font-size: 1.6em;
   letter-spacing: 2px;
   word-spacing: 4px;
+
+  @media (max-width: 1600px) {
+    font-size: 1.4em;
+  }
+
+  @media (max-width: 1440px) {
+    font-size: 1.3em;
+  }
+
+  @media (max-width: 1360px) {
+    font-size: 1.2em;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 0.9em;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 0.8em;
+  }
 }
 
 @mixin contactFormTitlesProperties {
@@ -75,4 +117,24 @@
   font-size: 2.2em;
   letter-spacing: 8px;
   text-transform: uppercase;
+
+  @media (max-width: 1600px) {
+    font-size: 2em;
+  }
+
+  @media (max-width: 1600px) {
+    font-size: 1.9em;
+  }
+
+  @media (max-width: 1360px) {
+    font-size: 1.8em;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 1.5em;
+  }
+
+  @media (max-width: 370px) {
+    font-size: 1.3em;
+  }
 }

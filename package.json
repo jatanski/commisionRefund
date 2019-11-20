@@ -26,6 +26,7 @@
     "typescript": "^3.7.2"
   },
   "devDependencies": {
+    "@types/react-burger-menu": "^2.6.0",
     "@types/react-helmet": "^5.0.14",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.6.0",
@@ -40,7 +41,8 @@
     "gatsby-plugin-typescript": "^2.1.17",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "node-sass": "^4.13.0",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "react-burger-menu": "^2.6.12"
   },
   "keywords": [
     "gatsby"

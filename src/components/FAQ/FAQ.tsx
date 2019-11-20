@@ -11,9 +11,13 @@ const FAQ = () => {
   const [faqClass, setFaqClass] = useState('faq');
 
   const showFAQ = () => {
-    console.log(scrollY);
+    let openHeight = 4300;
 
-    scrollY >= 4300 ? setFaqClass('faq showElement') : setFaqClass('faq');
+    if (screen.height <= 900) openHeight = 3700;
+
+    if (screen.height <= 768) openHeight = 3200;
+
+    scrollY >= openHeight ? setFaqClass('faq showElement') : setFaqClass('faq');
   };
 
   useEffect(() => {

@@ -16,6 +16,25 @@
     background-position: 50% 90%;
     clip-path: polygon(50% 0, 0% 100%, 100% 100%);
 
+    @media (max-width: 800px) {
+      top: 37vh;
+      width: 100vw;
+      height: 55vh;
+      background-position: 50% 40%;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    @media (max-width: 450px) {
+      top: 50vh;
+      height: 75vh;
+    }
+
+    @media (max-width: 380px) {
+      top: 50vh;
+      height: 80vh;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -25,6 +44,11 @@
       display: block;
       background-color: #000;
       opacity: 0.92;
+
+      @media (max-width: 450px) {
+        right: 0%;
+        opacity: 0.85;
+      }
     }
 
     &__text {
@@ -46,12 +70,71 @@
         left: 35%;
         font-size: 1.9em;
         text-transform: uppercase;
+
+        @media (max-width: 1600px) {
+          font-size: 1.7em;
+        }
+
+        @media (max-width: 1440px) {
+          font-size: 1.6em;
+        }
+
+        @media (max-width: 1360px) {
+          font-size: 1.35em;
+        }
+
+        @media (max-width: 800px) {
+          top: 15%;
+          left: 2%;
+          right: 55%;
+        }
+
+        @media (max-width: 450px) {
+          top: 15%;
+          left: 5%;
+          right: 5%;
+          text-align: center;
+        }
+
+        @media (max-width: 380px) {
+          top: 8%;
+        }
       }
 
       &--second {
         top: 44%;
         left: 30%;
         line-height: 1.6em;
+
+        @media (max-width: 1600px) {
+          line-height: 1.4em;
+          font-size: 0.9em;
+        }
+
+        @media (max-width: 1440px) {
+          font-size: 0.85em;
+        }
+
+        @media (max-width: 1360px) {
+          font-size: 0.75em;
+        }
+
+        @media (max-width: 800px) {
+          top: 50%;
+          left: 2%;
+          right: 55%;
+        }
+
+        @media (max-width: 450px) {
+          top: 48%;
+          left: 5%;
+          right: 5%;
+          text-align: center;
+        }
+
+        @media (max-width: 380px) {
+          top: 40%;
+        }
       }
 
       &--third {
@@ -59,11 +142,40 @@
         left: 15%;
         right: 55%;
         display: flex;
+        flex-wrap: wrap;
         justify-content: flex-end;
+
+        @media (max-width: 800px) {
+          top: 65%;
+          left: 0%;
+        }
+
+        @media (max-width: 450px) {
+          top: 65%;
+          left: 5%;
+          right: 20%;
+          text-align: center;
+        }
+
+        @media (max-width: 380px) {
+          top: 53%;
+        }
 
         & .h3 {
           margin: auto 1vw;
           font-size: 2.3em;
+
+          @media (max-width: 1600px) {
+            font-size: 2em;
+          }
+
+          @media (max-width: 1440px) {
+            font-size: 1.8em;
+          }
+
+          @media (max-width: 1360px) {
+            font-size: 1.65em;
+          }
         }
 
         & .header__button {
@@ -73,10 +185,29 @@
           font-weight: bold;
           font-size: 1em;
           padding: 20px;
+          z-index: 101;
 
           &:hover {
             background-color: $color-one;
             color: #fff;
+          }
+
+          @media (max-width: 1600px) {
+            font-size: 0.9em;
+            padding: 15px;
+          }
+
+          @media (max-width: 1440px) {
+            font-size: 0.85em;
+          }
+
+          @media (max-width: 1360px) {
+            font-size: 0.75em;
+            padding: 13px;
+          }
+
+          @media (max-width: 800px) {
+            margin-top: 1vh;
           }
         }
       }
@@ -91,4 +222,21 @@
   color: $color-one;
   font-size: 3em;
   animation: animationArrow infinite 3s both linear;
+  z-index: 10;
+
+  @media (max-width: 800px) {
+    top: 55%;
+    left: 5%;
+  }
+
+  @media (max-width: 450px) {
+    top: 80%;
+    left: 5%;
+    right: 5%;
+    text-align: center;
+  }
+
+  @media (max-width: 450px) {
+    top: 73%;
+  }
 }

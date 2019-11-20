@@ -13,10 +13,28 @@
   z-index: 1;
   animation: showMenu 2s;
 
+  @media (max-width: 800px) {
+    max-height: 5vh;
+  }
+
+  @media (max-width: 700px) {
+    max-height: 9vh;
+  }
+
   &__logo {
-    width: 30vw;
+    width: 28vw;
     margin: 6vh 4vw;
-    transition: 0.3s;
+    transition: 0.5s;
+
+    @media (max-width: 800px) {
+      width: 20vw;
+      margin: 0.5vh 0vw 1vh 4vw;
+    }
+
+    @media (max-width: 700px) {
+      width: 25vw;
+      margin: 0.5vh 0vw 1vh 4vw;
+    }
   }
 }
 
@@ -28,12 +46,36 @@
     flex-wrap: wrap;
     justify-content: space-around;
     width: 55vw;
+
+    @media (max-width: 1360px) {
+      width: 60vw;
+    }
+
+    @media (max-width: 800px) {
+      width: 70vw;
+    }
+
+    @media (max-width: 400px) {
+      width: 65vw;
+    }
+
+    @media (max-width: 380px) {
+      margin-right: 8vw;
+    }
   }
 
   &__item {
     padding: 20px 0 15px;
     display: flex;
     margin: auto 0;
+
+    @media (max-width: 450px) {
+      padding: 10px 0 15px;
+    }
+
+    @media (max-width: 380px) {
+      padding: 8px 0;
+    }
 
     &__link {
       padding-right: 1vw;
@@ -43,6 +85,29 @@
       font-weight: bold;
       text-transform: uppercase;
       transition: 0.2s;
+
+      @media (max-width: 1600px) {
+        font-size: 0.9em;
+      }
+
+      @media (max-width: 1440px) {
+        font-size: 0.8em;
+      }
+
+      @media (max-width: 1360px) {
+        font-size: 0.75em;
+      }
+
+      @media (max-width: 450px) {
+        font-size: 0.6em;
+        padding-right: 5vw;
+      }
+
+      @media (max-width: 380px) {
+        font-size: 0.6em;
+        padding-right: 2vw;
+        border-right: none;
+      }
 
       &:hover {
         color: $color-one;
@@ -76,13 +141,13 @@
 
   & .menu__logo {
     transform: translate(-26%, -64%) scale(0.65);
+
+    @media (max-width: 800px) {
+      transform: translate(0%, 0%) scale(1);
+    }
   }
 }
 
 .aaa {
   margin: auto 0;
-}
-
-.muka {
-  position: relative;
 }

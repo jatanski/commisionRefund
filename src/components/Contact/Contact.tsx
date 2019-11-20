@@ -12,9 +12,13 @@ const Contact = () => {
   const [contactClass, setContactClass] = useState('contact');
 
   const showContact = () => {
-    console.log(scrollY);
+    let openHeight = 5400;
 
-    scrollY >= 5400 ? setContactClass('contact showElement') : setContactClass('contact');
+    if (screen.height <= 900) openHeight = 4600;
+
+    if (screen.height <= 768) openHeight = 4000;
+
+    scrollY >= openHeight ? setContactClass('contact showElement') : setContactClass('contact');
   };
 
   useEffect(() => {

@@ -11,11 +11,17 @@ const Practice = () => {
   const [elementClass, setElementClass] = useState('practice__main__element');
 
   const showAbout = () => {
+    let openHeight = 3100;
+
     console.log(scrollY);
 
-    scrollY >= 3100 ? setTitleClass('practice__title showElement') : setTitleClass('practice__title');
+    if (screen.height <= 900) openHeight = 2600;
 
-    scrollY >= 3300
+    if (screen.height <= 768) openHeight = 2200;
+
+    scrollY >= openHeight ? setTitleClass('practice__title showElement') : setTitleClass('practice__title');
+
+    scrollY >= openHeight + 200
       ? setElementClass('practice__main__element showElement')
       : setElementClass('practice__main__element');
   };

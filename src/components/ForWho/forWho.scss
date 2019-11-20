@@ -6,6 +6,15 @@
   top: 182vh;
   overflow: hidden;
   max-width: 100%;
+
+  @media (max-width: 800px) {
+    top: 140vh;
+  }
+
+  @media (max-width: 450px) {
+    top: 240vh;
+  }
+
   &__wrap {
     position: relative;
     left: -60vw;
@@ -14,6 +23,23 @@
     background-color: #fff;
     -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+    @media (max-width: 800px) {
+      left: 0vw;
+      width: 100vw;
+      height: 150vh;
+      background-position: 50% 40%;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    @media (max-width: 450px) {
+      height: 300vh;
+    }
+
+    @media (max-width: 380px) {
+      height: 320vh;
+    }
   }
 }
 
@@ -26,11 +52,33 @@
     text-align: center;
     text-transform: uppercase;
 
+    @media (max-width: 800px) {
+      top: 2%;
+      left: 5%;
+      right: 5%;
+    }
+
     &--title {
       color: $color-one;
       line-height: 2;
       font-size: 2.4em;
       font-weight: bold;
+
+      @media (max-width: 1600px) {
+        font-size: 2.2em;
+      }
+
+      @media (max-width: 1440px) {
+        font-size: 2em;
+      }
+
+      @media (max-width: 1360px) {
+        font-size: 1.8em;
+      }
+
+      @media (max-width: 800px) {
+        font-size: 2.4em;
+      }
     }
 
     &--desc {
@@ -39,6 +87,14 @@
       font-size: 0.9em;
       letter-spacing: 1px;
       font-weight: bold;
+
+      @media (max-width: 1440px) {
+        font-size: 0.85em;
+      }
+
+      @media (max-width: 1360px) {
+        font-size: 0.8em;
+      }
     }
   }
 
@@ -52,12 +108,34 @@
     text-align: center;
     text-transform: uppercase;
 
+    @media (max-width: 800px) {
+      top: 20%;
+      left: 5%;
+      right: 5%;
+    }
+
     &--title {
       position: relative;
       margin-bottom: 7vh;
       font-weight: bold;
       letter-spacing: 10px;
       font-size: 2em;
+
+      @media (max-width: 1600px) {
+        font-size: 1.8em;
+      }
+
+      @media (max-width: 1440px) {
+        font-size: 1.7em;
+      }
+
+      @media (max-width: 1360px) {
+        font-size: 1.6em;
+      }
+
+      @media (max-width: 400px) {
+        font-size: 1.4em;
+      }
 
       &::after {
         @include centerWithPosition();
@@ -67,6 +145,11 @@
         height: 1px;
         background-color: $grey-medium;
         width: 10vw;
+
+        @media (max-width: 400px) {
+          top: 150%;
+          width: 40vw;
+        }
       }
     }
   }
@@ -83,9 +166,37 @@
     width: 23vw;
     margin-top: 5vh;
 
+    @media (max-width: 1360px) {
+      margin-top: 3vh;
+    }
+
+    @media (max-width: 450px) {
+      width: 40vw;
+    }
+
+    &--img {
+      @media (max-width: 1360px) {
+        transform: scale(0.75);
+      }
+    }
+
     &--text {
       letter-spacing: 1px;
       padding: 3vh 1vw;
+
+      @media (max-width: 1600px) {
+        font-size: 0.9em;
+        padding: 4vh 1vw;
+      }
+
+      @media (max-width: 1440px) {
+        font-size: 0.85em;
+      }
+
+      @media (max-width: 1360px) {
+        font-size: 0.8em;
+        padding: 2vh 1vw;
+      }
     }
   }
 }
@@ -100,12 +211,44 @@
   text-align: center;
   text-transform: uppercase;
 
+  @media (max-width: 1360px) {
+    top: 66%;
+  }
+
+  @media (max-width: 800px) {
+    top: 68%;
+    left: 3%;
+    right: 3%;
+  }
+
+  @media (max-width: 380px) {
+    top: 72%;
+    left: 3%;
+    right: 3%;
+  }
+
   &--title {
     position: relative;
     margin-bottom: 7vh;
     font-weight: bold;
     letter-spacing: 10px;
     font-size: 2em;
+
+    @media (max-width: 1600px) {
+      font-size: 1.8em;
+    }
+
+    @media (max-width: 1440px) {
+      font-size: 1.7em;
+    }
+
+    @media (max-width: 1360px) {
+      font-size: 1.6em;
+    }
+
+    @media (max-width: 800px) {
+      margin-bottom: 4vh;
+    }
 
     &::after {
       @include centerWithPosition();
@@ -123,6 +266,22 @@
     letter-spacing: 1px;
     text-transform: none;
     font-size: 1.2em;
+
+    @media (max-width: 1600px) {
+      font-size: 1em;
+    }
+
+    @media (max-width: 1440px) {
+      padding: 2.5vh 5vw;
+      font-size: 0.9em;
+      line-height: 1.3;
+    }
+
+    @media (max-width: 1360px) {
+      padding: 2vh 10vw;
+      font-size: 0.8em;
+      line-height: 1.3;
+    }
   }
 
   &--button {
@@ -135,6 +294,8 @@
 .forWho__about,
 .forWho__commision {
   opacity: 0;
-  // transform: translateX(-10%);
   transition: 1s;
+}
+
+@media (max-width: 1600px) {
 }
