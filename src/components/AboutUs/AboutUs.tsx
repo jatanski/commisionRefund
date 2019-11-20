@@ -9,11 +9,12 @@ const AboutUs = () => {
   const [descClass, setDescClass] = useState('about__main--desc');
 
   const showAbout = () => {
-    console.log(scrollY);
+    // @ts-ignore
+    const forWhoHeight = document.querySelector('.forWho').offsetHeight;
 
-    scrollY >= 2100 ? setTitleClass('about__main--title showElement') : setTitleClass('about__main--title');
+    scrollY >= forWhoHeight ? setTitleClass('about__main--title showElement') : setTitleClass('about__main--title');
 
-    scrollY >= 2400 ? setDescClass('about__main--desc showElement') : setDescClass('about__main--desc');
+    scrollY >= forWhoHeight + 300 ? setDescClass('about__main--desc showElement') : setDescClass('about__main--desc');
   };
 
   useEffect(() => {

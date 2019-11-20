@@ -18,6 +18,10 @@
       padding: 15vh 5vw;
       max-width: 680px;
       text-transform: uppercase;
+
+      @media (max-width: 1600px) {
+        padding: 10vh 5vw;
+      }
     }
 
     &--title {
@@ -77,11 +81,40 @@
       padding: 2vh 0 5vh 8vw;
       max-width: 800px;
       margin-right: 2vw;
+
+      @media (max-width: 1680px) {
+        max-width: 720px;
+      }
+
+      @media (max-width: 1600px) {
+        max-width: 650px;
+        margin-right: 1vw;
+        padding: 2vh 0 3vh 5vw;
+      }
+
+      @media (max-width: 1440px) {
+        max-width: 620px;
+      }
+
+      @media (max-width: 1360px) {
+        max-width: 580px;
+        margin-right: 1vw;
+        padding: 2vh 0 3vh 5vw;
+      }
     }
 
     &--title {
       @include contactFormTitlesProperties();
       margin-bottom: 1vh;
+
+      @media (max-width: 1440px) {
+        font-size: 1.7em;
+      }
+
+      @media (max-width: 1360px) {
+        font-size: 1.5em;
+        margin-bottom: 0vh;
+      }
     }
 
     & .contactForm {
@@ -97,11 +130,32 @@
           padding: 20px 0;
           background-color: transparent;
           font-size: 1.25em;
+
+          @media (max-width: 1600px) {
+            font-size: 1em;
+          }
+
+          @media (max-width: 1360px) {
+            font-size: 0.8em;
+          }
         }
 
         &--checkbox {
           margin-top: 2vh;
           font-size: 0.9em;
+
+          @media (max-width: 1600px) {
+            font-size: 0.8em;
+          }
+
+          @media (max-width: 1440px) {
+            font-size: 0.75em;
+          }
+
+          @media (max-width: 1360px) {
+            margin-top: 1vh;
+            font-size: 0.65em;
+          }
 
           & .checkbox__input {
             display: none;
@@ -116,6 +170,10 @@
               border-left-color: transparent;
               -webkit-transform: rotate(45deg);
               transform: rotate(45deg);
+
+              @media (max-width: 1600px) {
+                width: 8px;
+              }
             }
           }
 
@@ -141,6 +199,16 @@
               opacity: 0.6;
               -webkit-transition: all 0.12s, border-color 0.08s;
               transition: all 0.12s, border-color 0.08s;
+
+              @media (max-width: 1600px) {
+                width: 16px;
+                height: 16px;
+              }
+
+              @media (max-width: 1360px) {
+                width: 14px;
+                height: 14px;
+              }
             }
           }
         }
@@ -160,6 +228,16 @@
         &:hover {
           background-color: #000;
         }
+
+        @media (max-width: 1600px) {
+          font-size: 0.7em;
+          padding: 18px;
+        }
+
+        @media (max-width: 1360px) {
+          font-size: 0.65em;
+          padding: 14px;
+        }
       }
     }
   }
@@ -178,4 +256,12 @@
   font-weight: bold;
   letter-spacing: 1px;
   font-size: 1.1em;
+
+  @media (max-width: 1600px) {
+    font-size: 1em;
+  }
+
+  @media (max-width: 1360px) {
+    font-size: 0.8em;
+  }
 }
