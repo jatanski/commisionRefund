@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable no-undef */
+import React, { useState, useEffect } from 'react';
 import './nav.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearchDollar } from '@fortawesome/free-solid-svg-icons';
@@ -9,6 +10,12 @@ type ViewProps = {
 };
 
 const View = ({ navClasses }: ViewProps) => {
+  const [showButton, setShowButton] = useState(true);
+
+  useEffect(() => {
+    screen.width <= 800 ? setShowButton(false) : setShowButton(true);
+  });
+
   return (
     <section className={navClasses}>
       <a href="#header">
@@ -43,12 +50,14 @@ const View = ({ navClasses }: ViewProps) => {
               Kontakt
             </a>
           </li>
-          <a className="aaa" href="#contact">
-            <li className="nav__item nav__item--analize">
-              <FontAwesomeIcon className="nav__item__icon" icon={faSearchDollar} />
-              <p className="nav__item__text">Darmowa Analiza</p>
-            </li>
-          </a>
+          {showButton ? (
+            <a className="aaa" href="#contact">
+              <li className="nav__item nav__item--analize">
+                <FontAwesomeIcon className="nav__item__icon" icon={faSearchDollar} />
+                <p className="nav__item__text">Darmowa Analiza</p>
+              </li>
+            </a>
+          ) : null}
         </ul>
       </nav>
     </section>

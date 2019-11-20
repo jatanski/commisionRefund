@@ -10,7 +10,9 @@ const AboutUs = () => {
 
   const showAbout = () => {
     // @ts-ignore
-    const forWhoHeight = document.querySelector('.forWho').offsetHeight;
+    let forWhoHeight = document.querySelector('.forWho').offsetHeight;
+
+    if (screen.width <= 450) forWhoHeight -= 1000;
 
     scrollY >= forWhoHeight ? setTitleClass('about__main--title showElement') : setTitleClass('about__main--title');
 

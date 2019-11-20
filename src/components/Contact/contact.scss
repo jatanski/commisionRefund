@@ -6,6 +6,18 @@
   top: 200vh;
   background-color: #eae8e7;
 
+  @media (max-width: 800px) {
+    top: 155vh;
+  }
+
+  @media (max-width: 450px) {
+    top: 250vh;
+  }
+
+  @media (max-width: 3880px) {
+    top: 290vh;
+  }
+
   &__info {
     position: absolute;
     width: 100%;
@@ -14,6 +26,13 @@
     -webkit-clip-path: polygon(100% 0, 0% 100%, 0 0);
     clip-path: polygon(100% 0, 0% 100%, 0 0);
 
+    @media (max-width: 800px) {
+      position: relative;
+      min-height: 40vh;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
     &__wrap {
       padding: 15vh 5vw;
       max-width: 680px;
@@ -21,6 +40,14 @@
 
       @media (max-width: 1600px) {
         padding: 10vh 5vw;
+      }
+
+      @media (max-width: 800px) {
+        padding: 5vh 10vw;
+      }
+
+      @media (max-width: 450px) {
+        padding: 5vh 7vw;
       }
     }
 
@@ -61,6 +88,13 @@
         &:hover {
           background-color: $color-one;
         }
+
+        @media (max-width: 450px) {
+          height: 10vw;
+          width: 10vw;
+          line-height: 10vw;
+          font-size: 1.2em;
+        }
       }
     }
   }
@@ -76,6 +110,14 @@
     background-color: #eae8e7;
     -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+
+    @media (max-width: 800px) {
+      position: relative;
+      min-height: 45vh;
+      justify-content: center;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
 
     &__wrap {
       padding: 2vh 0 5vh 8vw;
@@ -100,6 +142,11 @@
         max-width: 580px;
         margin-right: 1vw;
         padding: 2vh 0 3vh 5vw;
+      }
+
+      @media (max-width: 800px) {
+        max-width: 700px;
+        margin-right: 3vw;
       }
     }
 
@@ -155,6 +202,11 @@
           @media (max-width: 1360px) {
             margin-top: 1vh;
             font-size: 0.65em;
+          }
+
+          @media (max-width: 450px) {
+            margin-top: 1vh;
+            font-size: 0.6em;
           }
 
           & .checkbox__input {
@@ -238,6 +290,11 @@
           font-size: 0.65em;
           padding: 14px;
         }
+
+        @media (max-width: 380px) {
+          font-size: 0.56em;
+          padding: 12px;
+        }
       }
     }
   }
@@ -263,5 +320,14 @@
 
   @media (max-width: 1360px) {
     font-size: 0.8em;
+  }
+
+  @media (max-width: 800px) {
+    top: -2vh;
+  }
+
+  @media (max-width: 380px) {
+    top: -1vh;
+    font-size: 0.7em;
   }
 }

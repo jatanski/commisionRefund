@@ -7,6 +7,18 @@
   padding: 10vh 0 1vh;
   background-color: #fff;
 
+  @media (max-width: 800px) {
+    top: 155vh;
+  }
+
+  @media (max-width: 450px) {
+    top: 255vh;
+  }
+
+  @media (max-width: 380px) {
+    top: 290vh;
+  }
+
   &__title {
     @include sectionTitle();
   }
@@ -18,6 +30,10 @@
       margin: 13vh 10vw;
     }
 
+    @media (max-width: 800px) {
+      margin: 10vh 2vw;
+    }
+
     &__element {
       display: flex;
       margin: 4vh 5vw;
@@ -26,6 +42,10 @@
 
       @media (max-width: 1440px) {
         margin: 6vh 5vw;
+      }
+
+      @media (max-width: 800px) {
+        margin: 6vh 2vw;
       }
     }
   }
@@ -40,6 +60,10 @@
   &__desc {
     padding: 2vh 5vw;
 
+    @media (max-width: 450px) {
+      padding: 0vh 4vw;
+    }
+
     &--title {
       display: inline-block;
       margin-bottom: 2.5vh;
@@ -49,6 +73,10 @@
 
       @media (max-width: 1360px) {
         font-size: 1.3em;
+      }
+
+      @media (max-width: 450px) {
+        font-size: 1.1em;
       }
 
       &::after {
@@ -77,6 +105,10 @@
         display: block;
         margin: 2vh 0 1vh 25vw;
         font-weight: bold;
+
+        @media (max-width: 450px) {
+          margin: 2vh 0 0;
+        }
       }
 
       &--multitext {
@@ -90,6 +122,5 @@
 .practice__title,
 .practice__main__element {
   opacity: 0;
-  // transform: translateX(-10%);
   transition: 1s;
 }

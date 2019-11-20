@@ -54,6 +54,11 @@
     height: 1px;
     width: 10vw;
     background-color: #000;
+
+    @media (max-width: 1440px) {
+      top: 150%;
+      width: 40vw;
+    }
   }
 
   @media (max-width: 1440px) {
@@ -63,6 +68,10 @@
   @media (max-width: 1360px) {
     font-size: 1.9em;
     margin-bottom: 5vh;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 1.7em;
   }
 }
 
@@ -91,6 +100,14 @@
   @media (max-width: 1360px) {
     font-size: 1.2em;
   }
+
+  @media (max-width: 450px) {
+    font-size: 0.9em;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 0.8em;
+  }
 }
 
 @mixin contactFormTitlesProperties {
@@ -111,5 +128,13 @@
 
   @media (max-width: 1360px) {
     font-size: 1.8em;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 1.5em;
+  }
+
+  @media (max-width: 370px) {
+    font-size: 1.3em;
   }
 }

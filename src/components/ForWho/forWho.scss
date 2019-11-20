@@ -6,6 +6,15 @@
   top: 182vh;
   overflow: hidden;
   max-width: 100%;
+
+  @media (max-width: 800px) {
+    top: 140vh;
+  }
+
+  @media (max-width: 450px) {
+    top: 240vh;
+  }
+
   &__wrap {
     position: relative;
     left: -60vw;
@@ -14,6 +23,23 @@
     background-color: #fff;
     -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+    @media (max-width: 800px) {
+      left: 0vw;
+      width: 100vw;
+      height: 150vh;
+      background-position: 50% 40%;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    @media (max-width: 450px) {
+      height: 300vh;
+    }
+
+    @media (max-width: 380px) {
+      height: 320vh;
+    }
   }
 }
 
@@ -25,6 +51,12 @@
     right: 38%;
     text-align: center;
     text-transform: uppercase;
+
+    @media (max-width: 800px) {
+      top: 2%;
+      left: 5%;
+      right: 5%;
+    }
 
     &--title {
       color: $color-one;
@@ -42,6 +74,10 @@
 
       @media (max-width: 1360px) {
         font-size: 1.8em;
+      }
+
+      @media (max-width: 800px) {
+        font-size: 2.4em;
       }
     }
 
@@ -71,6 +107,12 @@
     right: 31%;
     text-align: center;
     text-transform: uppercase;
+
+    @media (max-width: 800px) {
+      top: 20%;
+      left: 5%;
+      right: 5%;
+    }
 
     &--title {
       position: relative;
@@ -119,6 +161,10 @@
       margin-top: 3vh;
     }
 
+    @media (max-width: 450px) {
+      width: 40vw;
+    }
+
     &--img {
       @media (max-width: 1360px) {
         transform: scale(0.75);
@@ -160,6 +206,18 @@
     top: 66%;
   }
 
+  @media (max-width: 800px) {
+    top: 68%;
+    left: 3%;
+    right: 3%;
+  }
+
+  @media (max-width: 380px) {
+    top: 72%;
+    left: 3%;
+    right: 3%;
+  }
+
   &--title {
     position: relative;
     margin-bottom: 7vh;
@@ -177,6 +235,10 @@
 
     @media (max-width: 1360px) {
       font-size: 1.6em;
+    }
+
+    @media (max-width: 800px) {
+      margin-bottom: 4vh;
     }
 
     &::after {

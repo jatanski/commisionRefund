@@ -32,6 +32,22 @@ body {
   @media (max-width: 1360px) {
     min-height: 812vh;
   }
+
+  @media (max-width: 800px) {
+    min-height: 637vh;
+  }
+
+  @media (max-width: 450px) {
+    min-height: 926vh;
+  }
+
+  @media (max-width: 380px) {
+    min-height: 1021vh;
+  }
+
+  @media (max-width: 360px) {
+    min-height: 1035vh;
+  }
 }
 
 input[type='checkbox'] {

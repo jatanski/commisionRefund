@@ -13,10 +13,19 @@
   z-index: 1;
   animation: showMenu 2s;
 
+  @media (max-width: 800px) {
+    max-height: 5vh;
+  }
+
   &__logo {
     width: 28vw;
     margin: 6vh 4vw;
     transition: 0.5s;
+
+    @media (max-width: 800px) {
+      width: 20vw;
+      margin: 0.5vh 0vw 1vh 4vw;
+    }
   }
 }
 
@@ -31,6 +40,10 @@
 
     @media (max-width: 1360px) {
       width: 60vw;
+    }
+
+    @media (max-width: 800px) {
+      width: 70vw;
     }
   }
 
@@ -92,13 +105,13 @@
 
   & .menu__logo {
     transform: translate(-26%, -64%) scale(0.65);
+
+    @media (max-width: 800px) {
+      transform: translate(0%, 0%) scale(1);
+    }
   }
 }
 
 .aaa {
   margin: auto 0;
-}
-
-.muka {
-  position: relative;
 }
