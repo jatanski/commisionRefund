@@ -133,6 +133,10 @@
         font-size: 1.6em;
       }
 
+      @media (max-width: 400px) {
+        font-size: 1.4em;
+      }
+
       &::after {
         @include centerWithPosition();
         content: '';
@@ -141,6 +145,11 @@
         height: 1px;
         background-color: $grey-medium;
         width: 10vw;
+
+        @media (max-width: 400px) {
+          top: 150%;
+          width: 40vw;
+        }
       }
     }
   }

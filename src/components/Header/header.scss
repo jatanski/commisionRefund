@@ -30,6 +30,11 @@
       height: 75vh;
     }
 
+    @media (max-width: 380px) {
+      top: 50vh;
+      height: 80vh;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -90,6 +95,10 @@
           right: 5%;
           text-align: center;
         }
+
+        @media (max-width: 380px) {
+          top: 8%;
+        }
       }
 
       &--second {
@@ -122,6 +131,10 @@
           right: 5%;
           text-align: center;
         }
+
+        @media (max-width: 380px) {
+          top: 40%;
+        }
       }
 
       &--third {
@@ -142,6 +155,10 @@
           left: 5%;
           right: 20%;
           text-align: center;
+        }
+
+        @media (max-width: 380px) {
+          top: 53%;
         }
 
         & .h3 {
@@ -205,6 +222,7 @@
   color: $color-one;
   font-size: 3em;
   animation: animationArrow infinite 3s both linear;
+  z-index: 10;
 
   @media (max-width: 800px) {
     top: 55%;
@@ -216,5 +234,9 @@
     left: 5%;
     right: 5%;
     text-align: center;
+  }
+
+  @media (max-width: 450px) {
+    top: 73%;
   }
 }
