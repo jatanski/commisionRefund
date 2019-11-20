@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import utilClass from '../../utilClass';
 
 import Info from './Contact.Utils/Contact.Info';
-import Form from './Contact.Utils/COntact.Form';
+import Form from './Contact.Utils/Contact.Form';
 import Footer from './Contact.Utils/Contact.Footer';
 
 import './contact.scss';
