@@ -38,7 +38,7 @@ const Collapse = ({ collapse, closeCollapse }: CollapseProps) => {
       setContentClass(startContentClass);
       setIconState(false);
     }
-  }, [scrollY]);
+  });
 
   return (
     <div onClick={toggleCollapse} className="faq__questions__element">
