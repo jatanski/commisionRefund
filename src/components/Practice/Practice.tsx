@@ -13,8 +13,6 @@ const Practice = () => {
   const showAbout = () => {
     let openHeight = 3100;
 
-    console.log(scrollY);
-
     if (screen.height <= 900) openHeight = 2600;
 
     if (screen.height <= 768) openHeight = 2200;
