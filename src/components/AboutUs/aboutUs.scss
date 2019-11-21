@@ -190,13 +190,13 @@
     &--button {
       @include buttonOne();
       position: relative;
-      top: 229vh;
+      top: 230vh;
       padding: 20px;
       font-size: 1.3em;
       text-transform: uppercase;
 
       @media (max-width: 1600px) {
-        top: 234vh;
+        top: 235vh;
         padding: 16px;
         font-size: 1.2em;
       }
@@ -207,8 +207,8 @@
       }
 
       @media (max-width: 1360px) {
+        top: 233vh;
         font-size: 0.9em;
-        top: 232vh;
       }
 
       @media (max-width: 800px) {
