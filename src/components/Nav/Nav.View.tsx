@@ -18,7 +18,7 @@ const View = ({ navClasses }: ViewProps) => {
 
   return (
     <section className={navClasses}>
-      <a href="#header">
+      <a aria-label="Przejdź do góry strony" href="#header">
         <div className="menu__logo">
           <Logo></Logo>
         </div>
