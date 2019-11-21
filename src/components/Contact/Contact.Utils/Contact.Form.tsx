@@ -29,7 +29,13 @@ const Form = () => {
               <input type="checkbox" id="inputPrivatePolicy" className="checkbox__input" />
               <label htmlFor="inputPrivatePolicy" className="checkbox__label">
                 Oświadczam, iż zapoznałem się z{' '}
-                <a className="contactForm__link" href="#">
+                <a
+                  aria-label="Polityka Prywatności"
+                  target="_blank"
+                  download
+                  className="contactForm__link"
+                  href="/Polityka_Prywatnosci.pdf"
+                >
                   polityką prywatności
                 </a>{' '}
                 serwisu oraz akceptuję jej postanowienia.

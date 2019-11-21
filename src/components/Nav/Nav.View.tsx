@@ -51,7 +51,7 @@ const View = ({ navClasses }: ViewProps) => {
             </a>
           </li>
           {showButton ? (
-            <li>
+            <li className="superLi">
               <a className="aaa" href="#contact">
                 <div className="nav__item nav__item--analize">
                   <FontAwesomeIcon className="nav__item__icon" icon={faSearchDollar} />
