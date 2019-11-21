@@ -40,7 +40,7 @@ const View = ({ titleClass, descClass }: Props) => {
         <p className={moneyDescClass}>
           <span className="numbers">{numberOfMoney}</span> PLN
         </p>
-        <p className={underlineDescClass}> Nawet taką kwotę wypłacimy Ci w 24h</p>
+        <p className={underlineDescClass}> Nawet taką kwotę wypłacimy Ci w 24h.</p>
         <a href="#contact">
           <button className="about__main--button">Zamów darmową analizę Twojego zwrotu</button>
         </a>
