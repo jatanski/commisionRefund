@@ -10,16 +10,20 @@ const Form = () => {
         <div className="contact__form--main">
           <form className="contactForm" action="post" name="contactForm">
             <div className="contactForm__inputWrap">
-              <input type="text" placeholder="Imię" className="contactInput" />
+              <input type="text" placeholder="Imię" name="name" className="contactInput" />
+              <label htmlFor="name"></label>
             </div>
             <div className="contactForm__inputWrap">
-              <input type="text" placeholder="Nazwisko" className="contactInput" />
+              <input type="text" placeholder="Nazwisko" name="surname" className="contactInput" />
+              <label htmlFor="surname"></label>
             </div>
             <div className="contactForm__inputWrap">
-              <input type="email" placeholder="Adres e-mail" className="contactInput" />
+              <input type="email" placeholder="Adres e-mail" name="email" className="contactInput" />
+              <label htmlFor="email"></label>
             </div>
             <div className="contactForm__inputWrap">
-              <input type="number" placeholder="Numer telefonu" className="contactInput" />
+              <input type="number" placeholder="Numer telefonu" name="phone" className="contactInput" />
+              <label htmlFor="phone"></label>
             </div>
             <div className="contactForm__inputWrap--checkbox">
               <input type="checkbox" id="inputPrivatePolicy" className="checkbox__input" />

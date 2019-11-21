@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 SEO.defaultProps = {
   lang: `pl`,
   meta: [],
-  description: ``,
+  description: `Jeżeli spłaciłeś przed terminem, skonsolidowałeś lub przeniosłeś do innego banku swój kredyt to uzyskamy dla Ciebie gwarantowany zwrot prowizji!`,
 };
 
 type SEOprops = {
@@ -22,7 +22,7 @@ type SEOprops = {
   title: string;
 };
 
-function SEO({ description, lang, meta, title }: SEOprops) {
+function SEO({ description, lang = 'pl', meta, title }: SEOprops) {
   const { site } = useStaticQuery(
     graphql`
       query {
