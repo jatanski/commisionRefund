@@ -38,9 +38,6 @@ const Collapse = ({ collapse, closeCollapse }: CollapseProps) => {
       setContentClass(startContentClass);
       setIconState(false);
     }
-    // return () => {
-    //   cleanup
-    // };
   }, [scrollY]);
 
   return (
