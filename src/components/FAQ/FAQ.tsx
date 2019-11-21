@@ -22,6 +22,10 @@ const FAQ = () => {
 
   useEffect(() => {
     utilClass.addMethodsToScrollEvent([showFAQ]);
+
+    return () => {
+      utilClass.removeMethod(showFAQ);
+    };
   });
 
   return (

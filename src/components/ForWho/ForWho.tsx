@@ -17,7 +17,13 @@ const ForWho = () => {
   const [showClientsClasses, setShowClientsClass] = useState('forWho__clientsWrap');
   const [showCommisionClasses, setShowCommisionClass] = useState('forWho__commisionWrap');
 
-  useEffect(() => utilClass.addMethodsToScrollEvent([showForWho]));
+  useEffect(() => {
+    utilClass.addMethodsToScrollEvent([showForWho]);
+
+    return () => {
+      utilClass.removeMethod(showForWho);
+    };
+  });
 
   const showForWho = () => {
     scrollY >= 200 ? setShowAboutClass('forWho__about showElement') : setShowAboutClass('forWho__about');

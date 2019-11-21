@@ -30,11 +30,10 @@ const Form = () => {
               <label htmlFor="inputPrivatePolicy" className="checkbox__label">
                 Oświadczam, iż zapoznałem się z{' '}
                 <a
+                  className="contactForm__link"
                   aria-label="Polityka Prywatności"
                   target="_blank"
-                  download
-                  className="contactForm__link"
-                  href="/Polityka_Prywatnosci.pdf"
+                  href="/privatePolicy"
                 >
                   polityką prywatności
                 </a>{' '}

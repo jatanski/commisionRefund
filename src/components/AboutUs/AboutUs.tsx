@@ -21,6 +21,10 @@ const AboutUs = () => {
 
   useEffect(() => {
     utilClass.addMethodsToScrollEvent([showAbout]);
+
+    return () => {
+      utilClass.removeMethod(showAbout);
+    };
   });
 
   return <View titleClass={titleClass} descClass={descClass}></View>;

@@ -6,4 +6,8 @@ export default class utilClass {
       window.addEventListener('scroll', method);
     });
   };
+
+  static removeMethod = (method: () => void) => {
+    window.removeEventListener('scroll', method);
+  };
 }
