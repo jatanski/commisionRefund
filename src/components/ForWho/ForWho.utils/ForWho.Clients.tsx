@@ -30,7 +30,7 @@ const Clients = ({ classes }: Props) => {
             <img src={IconCoins} alt="monety" />
           </div>
           <p className="clients__element--text">
-            Następnie dokonały spłaty przed terminem, konsolidacji kredytów lub przeniosł kredyt do innego banku.
+            Następnie dokonały spłaty przed terminem, konsolidacji kredytów lub przeniosły kredyt do innego banku.
           </p>
         </li>
         <li className="clients__element">

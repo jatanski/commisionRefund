@@ -15,6 +15,14 @@
     top: 240vh;
   }
 
+  @media (max-width: 380px) {
+    top: 245vh;
+  }
+
+  @media (max-width: 360px) {
+    top: 250vh;
+  }
+
   &__wrap {
     position: relative;
     left: -60vw;
@@ -40,6 +48,10 @@
     @media (max-width: 380px) {
       height: 320vh;
     }
+
+    @media (max-width: 360px) {
+      height: 340vh;
+    }
   }
 }
 
@@ -54,6 +66,12 @@
 
     @media (max-width: 800px) {
       top: 2%;
+      left: 5%;
+      right: 5%;
+    }
+
+    @media (max-width: 380px) {
+      top: 3%;
       left: 5%;
       right: 5%;
     }
@@ -222,7 +240,13 @@
   }
 
   @media (max-width: 380px) {
-    top: 72%;
+    top: 68%;
+    left: 3%;
+    right: 3%;
+  }
+
+  @media (max-width: 360px) {
+    top: 70%;
     left: 3%;
     right: 3%;
   }

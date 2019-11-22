@@ -23,6 +23,10 @@ const Contact = () => {
 
   useEffect(() => {
     utilClass.addMethodsToScrollEvent([showContact]);
+
+    return () => {
+      utilClass.removeMethod(showContact);
+    };
   });
 
   return (

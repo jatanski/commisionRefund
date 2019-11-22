@@ -7,17 +7,17 @@ const collapseProperties = [
   {
     buttonText: 'Jakie dokumenty muszę przygotować?',
     desc1:
-      'Podstawą analizy są kopie (skany lub zdjęcia) pierwszych stron umów kredytowych/pożyczek oraz potwierdzenie spłaty kredytu. Nie masz starych dokumentów, umów kredytowych? ',
+      'Podstawą analizy są kopie (skany lub zdjęcia) pierwszych stron umów kredytowych/pożyczek oraz potwierdzenie spłaty kredytu. Jednak co w przydadku jeżeli mie posiadasz starych dokumentów lub umów kredytowych? ',
     desc2:
-      'Ponieważ często aktualna umowa konsolidacyjna jest potwierdzeniem spłaty starych kredytów- prosimy również o wybrane fragmenty/strony tych umów.',
-    desc3: 'Nie przejmuj się! Jesteśmy w stanie posiłkować się raportem z BIK.',
+      'Ponieważ często aktualna umowa konsolidacyjna jest potwierdzeniem spłaty starych kredytów - prosimy również o wybrane fragmenty/strony tych umów.',
+    desc3: 'Nie masz starych dokumentów, umów kredytowych? Nie przejmuj się! Jesteśmy w stanie posiłkować się raportem z BIK.',
   },
   {
     buttonText: 'Co w przypadku braku dokumentów?',
     desc1:
       'Czasami zdarza się, że klient nie posiada już dokumentów umowy starego kredytu. Wtedy najprostszym i najszybszym sposobem, jest wygenerowanie raportu BIK, który w zupełności wystarczy nam do analizy.',
     desc2:
-      'Bezpłatnie przeprowadzimy Cię i zapewnimy pomoc w zakresie pozyskania z BIK raportu „Profil kredytowy plus”.  Dokument ten w pełni nam wystarczy, aby wypłacić Ci środki.',
+      'Bezpłatnie przeprowadzimy Cię i zapewnimy pomoc w zakresie pozyskania z BIK raportu „Profil kredytowy plus”. Dokument ten w pełni nam wystarczy, aby wypłacić Ci środki.',
     desc3: 'Raport możesz pozyskać bez wychodzenia z domu, wszystko odbywa się on-line.',
   },
   {
@@ -33,12 +33,12 @@ const collapseProperties = [
   {
     buttonText: 'Czy ciązą na mnie jakieś dodatkowe obowiązki?',
     desc1:
-      'Tylko w teorii. W praktyce, gdy klient sam skieruje się do banku o zwrot prowizji, w 99% przypadków spotka się z odmową. Takiemu klientowi zostaje jedynie droga sądowa. Gdyby klient zdecydował się na takie rozwiązanie, to musi się liczyć z tym, że przyjdzie mu zatrudnić dobrego prawnika, który specjalizuje się w tym zakresie. Kolejną kwestią jest czas trwania takiej rozprawy.',
+      'Cała procedura odbywa się drogą internetową, więc praktycznie po podpisaniu dokumentów, klient może zapomnieć o całej sprawie i cieszyć się uzyskaną gotówką.',
   },
   {
     buttonText: 'Czy mogę we własnym zakresie odzyskać prowizję bankową?',
     desc1:
-      'Czasami zdarza się, że klient nie posiada już dokumentów umowy starego kredytu. Wtedy najprostszym i najszybszym sposobem, jest wygenerowanie raportu BIK, który w zupełności wystarczy nam do analizy.',
+      'Tylko w teorii. W praktyce, gdy klient sam skieruje się do banku o zwrot prowizji, w 99% przypadków spotka się z odmową. Takiemu klientowi zostaje jedynie droga sądowa. Gdyby klient zdecydował się na takie rozwiązanie, to musi się liczyć z tym, że przyjdzie mu zatrudnić dobrego prawnika, który specjalizuje się w tym zakresie. Kolejną kwestią jest czas trwania takiej rozprawy.',
     desc2:
       'W tej chwili średnio takie sprawy trwają 10- 12 miesięcy a klient i tak do końca nie jest pewny, czy wygra sprawę. Dodatkowym aspektem jest kwota zwrotu prowizji, od której kancelarie zaczynają takie sprawy. Na tą chwilę, minimalna kwota zwrotu prowizji musi wynosić 1500zł, aby kancelarie podejmowały się sprawy.',
     desc3:

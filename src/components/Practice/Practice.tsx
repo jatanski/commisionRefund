@@ -10,7 +10,7 @@ const Practice = () => {
   const [titleClass, setTitleClass] = useState('practice__title');
   const [elementClass, setElementClass] = useState('practice__main__element');
 
-  const showAbout = () => {
+  const showPractice = () => {
     let openHeight = 3100;
 
     if (screen.height <= 900) openHeight = 2600;
@@ -25,7 +25,11 @@ const Practice = () => {
   };
 
   useEffect(() => {
-    utilClass.addMethodsToScrollEvent([showAbout]);
+    utilClass.addMethodsToScrollEvent([showPractice]);
+
+    return () => {
+      utilClass.removeMethod(showPractice);
+    };
   });
   return <View titleClass={titleClass} elementClass={elementClass}></View>;
 };

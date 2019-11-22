@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable no-undef */
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretRight, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,9 +10,10 @@ type CollapseProps = {
     desc2?: string;
     desc3?: string;
   };
+  closeCollapse: boolean;
 };
 
-const Collapse = ({ collapse }: CollapseProps) => {
+const Collapse = ({ collapse, closeCollapse }: CollapseProps) => {
   const { buttonText, desc1, desc2, desc3 } = collapse;
   const startButtonClass = 'faq__questions__element--title';
   const startContentClass = 'faq__questions__element--desc';
@@ -29,6 +31,14 @@ const Collapse = ({ collapse }: CollapseProps) => {
 
     setIconState(!iconState);
   };
+
+  useEffect(() => {
+    if (closeCollapse) {
+      setButtonClass(startButtonClass);
+      setContentClass(startContentClass);
+      setIconState(false);
+    }
+  });
 
   return (
     <div onClick={toggleCollapse} className="faq__questions__element">

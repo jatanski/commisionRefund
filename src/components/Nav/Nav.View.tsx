@@ -18,7 +18,7 @@ const View = ({ navClasses }: ViewProps) => {
 
   return (
     <section className={navClasses}>
-      <a href="#header">
+      <a aria-label="Przejdź do góry strony" href="#header">
         <div className="menu__logo">
           <Logo></Logo>
         </div>
@@ -51,12 +51,14 @@ const View = ({ navClasses }: ViewProps) => {
             </a>
           </li>
           {showButton ? (
-            <a className="aaa" href="#contact">
-              <li className="nav__item nav__item--analize">
-                <FontAwesomeIcon className="nav__item__icon" icon={faSearchDollar} />
-                <p className="nav__item__text">Darmowa Analiza</p>
-              </li>
-            </a>
+            <li className="superLi">
+              <a className="aaa" href="#contact">
+                <div className="nav__item nav__item--analize">
+                  <FontAwesomeIcon className="nav__item__icon" icon={faSearchDollar} />
+                  <p className="nav__item__text">Darmowa Analiza</p>
+                </div>
+              </a>
+            </li>
           ) : null}
         </ul>
       </nav>

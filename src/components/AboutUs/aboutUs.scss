@@ -17,6 +17,10 @@
     min-height: 155vh;
   }
 
+  @media (max-width: 360px) {
+    min-height: 170vh;
+  }
+
   &__image {
     @include centerWithPosition();
     top: 185vh;
@@ -54,6 +58,11 @@
 
     @media (max-width: 380px) {
       top: 320vh;
+      background-position: center 40%;
+    }
+
+    @media (max-width: 360px) {
+      top: 340vh;
       background-position: center 40%;
     }
   }
@@ -101,7 +110,10 @@
 
       @media (max-width: 380px) {
         top: 315vh;
-        margin: 0 10vw 7vh;
+      }
+
+      @media (max-width: 360px) {
+        top: 335vh;
       }
 
       &::after {
@@ -147,6 +159,10 @@
         top: 328vh;
       }
 
+      @media (max-width: 360px) {
+        top: 348vh;
+      }
+
       &-money {
         padding: 0 15vw;
         font-size: 3.5em;
@@ -174,13 +190,13 @@
     &--button {
       @include buttonOne();
       position: relative;
-      top: 229vh;
+      top: 230vh;
       padding: 20px;
       font-size: 1.3em;
       text-transform: uppercase;
 
       @media (max-width: 1600px) {
-        top: 234vh;
+        top: 235vh;
         padding: 16px;
         font-size: 1.2em;
       }
@@ -191,8 +207,8 @@
       }
 
       @media (max-width: 1360px) {
+        top: 233vh;
         font-size: 0.9em;
-        top: 232vh;
       }
 
       @media (max-width: 800px) {
@@ -209,6 +225,10 @@
         top: 320vh;
         padding: 10px;
         font-size: 0.7em;
+      }
+
+      @media (max-width: 360px) {
+        top: 336vh;
       }
 
       &:hover {

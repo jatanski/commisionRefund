@@ -29,17 +29,21 @@ const Info = () => {
           </p>
         </div>
         <div className="contact__info--social">
-          <a target="_blank" href="https://www.facebook.com/odzyskamytwojaprowizje/">
+          <a
+            aria-label="Strona firmona na facebooku."
+            target="_blank"
+            href="https://www.facebook.com/odzyskamytwojaprowizje/"
+          >
             <div className="social__element">
               <FontAwesomeIcon icon={faFacebookF} />
             </div>
           </a>
-          <a target="_blank" href="">
+          <a aria-label="Strona firmona na linkedIn." target="_blank" href="">
             <div className="social__element">
               <FontAwesomeIcon icon={faTwitter} />
             </div>
           </a>
-          <a target="_blank" href="">
+          <a aria-label="Strona firmona na Instagramie." target="_blank" href="">
             <div className="social__element">
               <FontAwesomeIcon icon={faLinkedinIn} />
             </div>

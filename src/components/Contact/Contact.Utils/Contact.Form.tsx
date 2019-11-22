@@ -10,22 +10,31 @@ const Form = () => {
         <div className="contact__form--main">
           <form className="contactForm" action="post" name="contactForm">
             <div className="contactForm__inputWrap">
-              <input type="text" placeholder="Imię" className="contactInput" />
+              <input type="text" placeholder="Imię" id="name" className="contactInput" />
+              <label htmlFor="name"></label>
             </div>
             <div className="contactForm__inputWrap">
-              <input type="text" placeholder="Nazwisko" className="contactInput" />
+              <input type="text" placeholder="Nazwisko" id="surname" className="contactInput" />
+              <label htmlFor="surname"></label>
             </div>
             <div className="contactForm__inputWrap">
-              <input type="email" placeholder="Adres e-mail" className="contactInput" />
+              <input type="email" placeholder="Adres e-mail" id="email" className="contactInput" />
+              <label htmlFor="email"></label>
             </div>
             <div className="contactForm__inputWrap">
-              <input type="number" placeholder="Numer telefonu" className="contactInput" />
+              <input type="number" placeholder="Numer telefonu" id="phone" className="contactInput" />
+              <label htmlFor="phone"></label>
             </div>
             <div className="contactForm__inputWrap--checkbox">
               <input type="checkbox" id="inputPrivatePolicy" className="checkbox__input" />
               <label htmlFor="inputPrivatePolicy" className="checkbox__label">
                 Oświadczam, iż zapoznałem się z{' '}
-                <a className="contactForm__link" href="#">
+                <a
+                  className="contactForm__link"
+                  aria-label="Polityka Prywatności"
+                  target="_blank"
+                  href="/privatePolicy"
+                >
                   polityką prywatności
                 </a>{' '}
                 serwisu oraz akceptuję jej postanowienia.
