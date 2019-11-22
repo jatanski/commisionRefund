@@ -16,11 +16,19 @@
       text-transform: uppercase;
       word-spacing: 5px;
       margin-bottom: 5vh;
+
+      @media (max-width: 500px) {
+        font-size: 3em;
+      }
     }
 
     &--text {
       font-size: 1.6rem;
       margin-bottom: 5vh;
+
+      @media (max-width: 500px) {
+        font-size: 1.4em;
+      }
     }
   }
 
@@ -28,6 +36,10 @@
     &--title {
       font-size: 1.6em;
       margin-bottom: 5vh;
+
+      @media (max-width: 500px) {
+        font-size: 1.4em;
+      }
     }
   }
 }
