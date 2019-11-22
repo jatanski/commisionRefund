@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../scss/policy.scss';
+import '../scss/pages/policy.scss';
 
 import SEO from '../components/seo';
 

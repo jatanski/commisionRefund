@@ -1,63 +1,105 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
+/* eslint-disable no-undef */
+import React, { Component, ChangeEvent, SyntheticEvent } from 'react';
+import { navigate } from 'gatsby';
+import emailjs from 'emailjs-com';
+import View from './Contact.Form.View';
 
-const Form = () => {
-  return (
-    <div className="contact__form">
-      <div className="contact__form__wrap">
-        <h2 className="contact__form--title">Zamów darmową analizę</h2>
-        <div className="contact__form--main">
-          <form className="contactForm" action="post" name="contactForm">
-            <div className="contactForm__inputWrap">
-              <input type="text" placeholder="Imię" id="name" className="contactInput" />
-              <label htmlFor="name"></label>
-            </div>
-            <div className="contactForm__inputWrap">
-              <input type="text" placeholder="Nazwisko" id="surname" className="contactInput" />
-              <label htmlFor="surname"></label>
-            </div>
-            <div className="contactForm__inputWrap">
-              <input type="email" placeholder="Adres e-mail" id="email" className="contactInput" />
-              <label htmlFor="email"></label>
-            </div>
-            <div className="contactForm__inputWrap">
-              <input type="number" placeholder="Numer telefonu" id="phone" className="contactInput" />
-              <label htmlFor="phone"></label>
-            </div>
-            <div className="contactForm__inputWrap--checkbox">
-              <input type="checkbox" id="inputPrivatePolicy" className="checkbox__input" />
-              <label htmlFor="inputPrivatePolicy" className="checkbox__label">
-                Oświadczam, iż zapoznałem się z{' '}
-                <a
-                  className="contactForm__link"
-                  aria-label="Polityka Prywatności"
-                  target="_blank"
-                  href="/privatePolicy"
-                >
-                  polityką prywatności
-                </a>{' '}
-                serwisu oraz akceptuję jej postanowienia.
-              </label>
-            </div>
-            <div className="contactForm__inputWrap--checkbox">
-              <input type="checkbox" id="inputRODO" className="checkbox__input" />
-              <label htmlFor="inputRODO" className="checkbox__label">
-                Wyrażam zgodę na przesyłanie informacji handlowych za pomocą środków komunikacji elektronicznej w
-                rozumieniu ustawy z dnia 18 lipca 2002 roku o świadczenie usług drogą elektroniczną (Dz.U.2017.1219
-                t.j.) na podany adres e-mail na temat usług oferowanych przez Jakuba Tańskiego zamieszkałego Śmigiel,
-                ul. Mierosławskiego 1 64-030. Zgoda jest dobrowolna i może być w każdej chwili wycofana, klikając w
-                odpowiedni link na końcu wiadomości e-mail. Wycofanie zgody nie wpływa na zgodność z prawem
-                przetwarzania, którego dokonano na podstawie zgody przez jej wycofaniem.
-              </label>
-            </div>
-            <button type="submit" className="contactForm__button">
-              Zamów darmową analizę należnego Tobie zwrotu <FontAwesomeIcon icon={faCaretRight}></FontAwesomeIcon>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  );
-};
+class Form extends Component {
+  state = {
+    formName: '',
+    formSurname: '',
+    formEmail: '',
+    formPhone: '',
+    inputPrivatePolicy: false,
+    inputRODO: false,
+    showFalseAgreements: false,
+    showFalseName: false,
+    showFalseEmail: false,
+  };
+
+  handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const state: any = {};
+    state[`${e.target.id}`] = e.target.value;
+    this.setState(state);
+  };
+
+  handleCheckboxInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const state: any = {};
+    state[`${e.target.id}`] = e.target.checked;
+    this.setState(state);
+
+    console.log(state);
+  };
+
+  handleSubmit = (e: SyntheticEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
+    this.useEmailJS();
+  };
+
+  useEmailJS = () => {
+    const formStatus = this.verifyFormInput();
+    if (!formStatus) return;
+
+    const service_ID = 'gmail';
+    const template_ID = 'commision_refund';
+    const user_ID = 'user_n0WHjyWmnMLuPLadBWMaO';
+    const templateParams = this.setEmailTemplate();
+
+    emailjs.send(service_ID, template_ID, templateParams, user_ID).then(
+      response => {
+        console.log('SUCCESS!', response.status, response.text);
+        navigate('confirmation');
+      },
+      err => {
+        console.log('FAILED...', err);
+      },
+    );
+  };
+
+  verifyFormInput = () => {
+    const { formName, formEmail, inputPrivatePolicy, inputRODO } = this.state;
+
+    let status = true;
+
+    formName && formEmail && inputPrivatePolicy && inputRODO ? (status = true) : (status = false);
+
+    formName ? this.setState({ showFalseName: false }) : this.setState({ showFalseName: true });
+
+    formEmail ? this.setState({ showFalseEmail: false }) : this.setState({ showFalseEmail: true });
+
+    inputPrivatePolicy && inputRODO
+      ? this.setState({ showFalseAgreements: false })
+      : this.setState({ showFalseAgreements: true });
+
+    return status;
+  };
+
+  setEmailTemplate = () => {
+    const { formName, formSurname, formEmail, formPhone } = this.state;
+
+    const message = `Dane kontatowe: ${formName} ${formSurname}. Numer telefonu: ${formPhone}. Adres e-mail: ${formEmail}`;
+
+    return {
+      from_name: formEmail,
+      to_name: 'ja.tanski@gmail.com',
+      subject: 'Nowy kontakt',
+      message_html: message,
+    };
+  };
+
+  render() {
+    return (
+      <View
+        showFalseName={this.state.showFalseName}
+        showFalseEmail={this.state.showFalseEmail}
+        showFalseAgreements={this.state.showFalseAgreements}
+        handleSubmit={this.handleSubmit}
+        handleInputChange={this.handleInputChange}
+        handleCheckboxInputChange={this.handleCheckboxInputChange}
+      ></View>
+    );
+  }
+}
+
 export default Form;

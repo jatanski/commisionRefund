@@ -38,12 +38,16 @@ const Info = () => {
               <FontAwesomeIcon icon={faFacebookF} />
             </div>
           </a>
-          <a aria-label="Strona firmona na linkedIn." target="_blank" href="">
+          {/* <a aria-label="Strona firmona na linkedIn." target="_blank" href="">
             <div className="social__element">
               <FontAwesomeIcon icon={faTwitter} />
             </div>
-          </a>
-          <a aria-label="Strona firmona na Instagramie." target="_blank" href="">
+          </a> */}
+          <a
+            aria-label="Strona firmona na LinkedIn."
+            target="_blank"
+            href="https://www.linkedin.com/company/odzyskamy-twoj%C4%85-prowizje"
+          >
             <div className="social__element">
               <FontAwesomeIcon icon={faLinkedinIn} />
             </div>
