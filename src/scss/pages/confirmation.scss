@@ -1,0 +1,33 @@
+.confirmation {
+  background-image: url(../../images/confirmation.jpg);
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+
+  &__wrap {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    padding: 5vh 10vw;
+  }
+
+  &__info {
+    &--title {
+      font-size: 4rem;
+      text-transform: uppercase;
+      word-spacing: 5px;
+      margin-bottom: 5vh;
+    }
+
+    &--text {
+      font-size: 1.6rem;
+      margin-bottom: 5vh;
+    }
+  }
+
+  &__facebook {
+    &--title {
+      font-size: 1.6em;
+      margin-bottom: 5vh;
+    }
+  }
+}
