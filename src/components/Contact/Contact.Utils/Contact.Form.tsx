@@ -88,6 +88,8 @@ class Form extends Component {
     };
   };
 
+  resetForm = () => this.setState({});
+
   render() {
     return (
       <View

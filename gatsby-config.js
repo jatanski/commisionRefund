@@ -4,6 +4,7 @@ module.exports = {
     description:
       'Jeżeli spłaciłeś przed terminem, skonsolidowałeś lub przeniosłeś do innego banku swój kredyt to uzyskamy dla Ciebie gwarantowany zwrot prowizji!',
     author: 'Jakub Tański',
+    logo: 'src/images/favicon.png',
   },
   plugins: [
     {
