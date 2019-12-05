@@ -31,9 +31,6 @@ function SEO({ description, lang = 'pl', meta, title }: SEOprops) {
             title
             description
             author
-            logo {
-              publicURL
-            }
           }
         }
       }

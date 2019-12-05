@@ -1,0 +1,38 @@
+.reklama {
+  position: relative;
+  min-height: 100vh;
+  background-image: url(../../images/AdobeStock_282930658.jpeg);
+  background-size: contain;
+  color: #fff;
+}
+
+.img {
+  position: absolute;
+  top: -6%;
+  left: 1%;
+  width: 32%;
+}
+
+.text {
+  position: absolute;
+  left: 1.5%;
+  top: 52%;
+  width: 40%;
+
+  &__paraf {
+    line-height: 1.5;
+    font-size: 2.9rem;
+  }
+}
+
+.bg-yellow {
+  padding: 0 4px;
+  background-color: #e0ae77;
+}
+
+.url {
+  position: absolute;
+  top: 96%;
+  left: 0.8%;
+  font-size: 1.2rem;
+}
