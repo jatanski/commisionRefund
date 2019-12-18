@@ -157,6 +157,7 @@
 
       @media (max-width: 380px) {
         top: 328vh;
+        font-size: 0.95em;
       }
 
       @media (max-width: 360px) {
@@ -176,8 +177,13 @@
           font-size: 3em;
         }
 
-        @media (max-width: 380px) {
+        @media (max-width: 450px) {
+          margin-top: -2vh;
           font-size: 2.6em;
+        }
+
+        @media (max-width: 380px) {
+          font-size: 2.2em;
         }
 
         & .numbers {
@@ -216,19 +222,19 @@
       }
 
       @media (max-width: 450px) {
-        top: 305vh;
+        top: 312vh;
         padding: 15px;
         font-size: 0.8em;
       }
 
       @media (max-width: 380px) {
-        top: 320vh;
+        top: 328vh;
         padding: 10px;
         font-size: 0.7em;
       }
 
       @media (max-width: 360px) {
-        top: 336vh;
+        top: 350vh;
       }
 
       &:hover {
@@ -241,6 +247,5 @@
 .about__main--title,
 .about__main--desc {
   opacity: 0;
-  // transform: translateX(-10%);
   transition: 1s;
 }
