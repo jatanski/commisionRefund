@@ -1,18 +1,17 @@
-/* eslint-disable no-undef */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, FC } from 'react';
 import utilClass from '../../utilClass';
-import View from './Nav.View';
+import NavView from './Nav.View';
 
-const Nav = () => {
+const Nav: FC = () => {
   const [navClasses, setNavClasses] = useState('menu');
-
-  const getScrollPosition = () => {
-    scrollY > 0 ? setNavClasses('menu menu--scroll') : setNavClasses('menu');
-  };
 
   useEffect(() => utilClass.addMethodsToScrollEvent([getScrollPosition]));
 
-  return <View navClasses={navClasses}></View>;
+  function getScrollPosition() {
+    scrollY > 0 ? setNavClasses('menu menu--scroll') : setNavClasses('menu');
+  }
+
+  return <NavView navClassName={navClasses}></NavView>;
 };
 
 export default Nav;

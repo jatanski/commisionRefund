@@ -1,19 +1,9 @@
-/* eslint-disable no-undef */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, FC } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretRight, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { CollapseProps } from './FAQ.types';
 
-type CollapseProps = {
-  collapse: {
-    buttonText: string;
-    desc1: string;
-    desc2?: string;
-    desc3?: string;
-  };
-  closeCollapse: boolean;
-};
-
-const Collapse = ({ collapse, closeCollapse }: CollapseProps) => {
+const Collapse: FC<CollapseProps> = ({ collapse, isClosedCollapse }) => {
   const { buttonText, desc1, desc2, desc3 } = collapse;
   const startButtonClass = 'faq__questions__element--title';
   const startContentClass = 'faq__questions__element--desc';
@@ -21,6 +11,14 @@ const Collapse = ({ collapse, closeCollapse }: CollapseProps) => {
   const [buttonClass, setButtonClass] = useState(startButtonClass);
   const [contentClass, setContentClass] = useState(startContentClass);
   const [iconState, setIconState] = useState(false);
+
+  useEffect(() => {
+    if (isClosedCollapse) {
+      setButtonClass(startButtonClass);
+      setContentClass(startContentClass);
+      setIconState(false);
+    }
+  });
 
   const toggleCollapse = () => {
     buttonClass === startButtonClass ? setButtonClass(`${startButtonClass} active`) : setButtonClass(startButtonClass);
@@ -31,14 +29,6 @@ const Collapse = ({ collapse, closeCollapse }: CollapseProps) => {
 
     setIconState(!iconState);
   };
-
-  useEffect(() => {
-    if (closeCollapse) {
-      setButtonClass(startButtonClass);
-      setContentClass(startContentClass);
-      setIconState(false);
-    }
-  });
 
   return (
     <div onClick={toggleCollapse} className="faq__questions__element">

@@ -7,7 +7,6 @@ import Practice from '../components/Practice/Practice';
 import FAQ from '../components/FAQ/FAQ';
 import Contact from '../components/Contact/Contact';
 import SEO from '../components/seo';
-
 import '../scss/global.scss';
 
 const IndexPage = () => (

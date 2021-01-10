@@ -1,24 +1,15 @@
-import React, { useEffect, useState } from 'react';
-
+import React, { FC } from 'react';
 import './aboutUs.scss';
 
-type Props = {
+interface AboutUsViewProps {
   titleClass: string;
   descClass: string;
-};
+  numberOfMoney: number;
+}
 
-const View = ({ titleClass, descClass }: Props) => {
+const AboutUsView: FC<AboutUsViewProps> = ({ titleClass, descClass, numberOfMoney }) => {
   const moneyDescClass = `${descClass} about__main--desc-money`;
-
   const underlineDescClass = `${descClass} underline`;
-
-  const [numberOfMoney, setNumberOfMoney] = useState(0);
-
-  useEffect(() => {
-    if (descClass === 'about__main--desc showElement') {
-      if (numberOfMoney < 12000) setNumberOfMoney(numberOfMoney + 10);
-    }
-  });
 
   return (
     <section className="about">
@@ -49,4 +40,4 @@ const View = ({ titleClass, descClass }: Props) => {
   );
 };
 
-export default View;
+export default AboutUsView;

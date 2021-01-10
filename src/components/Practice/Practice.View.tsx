@@ -1,21 +1,16 @@
-import React from 'react';
-
+import React, { FC } from 'react';
 import './practice.scss';
-// @ts-ignore
-import IconFile from '../../images/practice-icons/file-1.png';
-// @ts-ignore
-import IconSupport from '../../images/practice-icons/support.png';
-// @ts-ignore
-import IconNotepad from '../../images/practice-icons/notepad-1.png';
-// @ts-ignore
-import IconMoney from '../../images/practice-icons/notes.png';
+const IconFile = require('../../images/practice-icons/file-1.png');
+const IconSupport = require('../../images/practice-icons/support.png');
+const IconNotepad = require('../../images/practice-icons/notepad-1.png');
+const IconMoney = require('../../images/practice-icons/notes.png');
 
-type Props = {
+interface PraticeViewProps {
   titleClass: string;
   elementClass: string;
-};
+}
 
-const Practice = ({ titleClass, elementClass }: Props) => {
+const PracticeView: FC<PraticeViewProps> = ({ titleClass, elementClass }) => {
   const leftElementClass = `${elementClass} element--left`;
   const rightElementClass = `${elementClass} element--right`;
 
@@ -86,4 +81,4 @@ const Practice = ({ titleClass, elementClass }: Props) => {
   );
 };
 
-export default Practice;
+export default PracticeView;

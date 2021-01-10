@@ -1,15 +1,14 @@
-/* eslint-disable no-undef */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, FC } from 'react';
 import './nav.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearchDollar } from '@fortawesome/free-solid-svg-icons';
 import Logo from './Logo';
 
-type ViewProps = {
-  navClasses: string;
-};
+interface NavViewProps {
+  navClassName: string;
+}
 
-const View = ({ navClasses }: ViewProps) => {
+const NavView: FC<NavViewProps> = ({ navClassName }) => {
   const [showButton, setShowButton] = useState(true);
 
   useEffect(() => {
@@ -17,7 +16,7 @@ const View = ({ navClasses }: ViewProps) => {
   });
 
   return (
-    <section className={navClasses}>
+    <section className={navClassName}>
       <a aria-label="Przejdź do góry strony" href="#header">
         <div className="menu__logo">
           <Logo></Logo>
@@ -66,4 +65,4 @@ const View = ({ navClasses }: ViewProps) => {
   );
 };
 
-export default View;
+export default NavView;

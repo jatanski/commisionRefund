@@ -1,10 +1,3 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
@@ -15,14 +8,14 @@ SEO.defaultProps = {
   description: `Jeżeli spłaciłeś przed terminem, skonsolidowałeś lub przeniosłeś do innego banku swój kredyt to uzyskamy dla Ciebie gwarantowany zwrot prowizji!`,
 };
 
-type SEOprops = {
+interface SEOProps {
   description?: string;
-  lang: string;
-  meta: Array<any>;
+  lang?: string;
+  meta: Array<HTMLMetaElement>;
   title: string;
-};
+}
 
-function SEO({ description, lang = 'pl', meta, title }: SEOprops) {
+function SEO({ description, lang, meta, title }: SEOProps) {
   const { site } = useStaticQuery(
     graphql`
       query {

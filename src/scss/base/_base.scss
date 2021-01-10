@@ -25,6 +25,10 @@ body {
     min-height: 778vh;
   }
 
+  @media (max-width: 1540px) {
+    min-height: 784vh;
+  }
+
   @media (max-width: 1440px) {
     min-height: 786vh;
   }

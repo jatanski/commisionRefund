@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import React, { Component, ChangeEvent, SyntheticEvent } from 'react';
 import { navigate } from 'gatsby';
 import emailjs from 'emailjs-com';
@@ -27,13 +26,10 @@ class Form extends Component {
     const state: any = {};
     state[`${e.target.id}`] = e.target.checked;
     this.setState(state);
-
-    console.log(state);
   };
 
   handleSubmit = (e: SyntheticEvent<HTMLButtonElement>) => {
     e.preventDefault();
-
     this.useEmailJS();
   };
 
@@ -99,7 +95,7 @@ class Form extends Component {
         handleSubmit={this.handleSubmit}
         handleInputChange={this.handleInputChange}
         handleCheckboxInputChange={this.handleCheckboxInputChange}
-      ></View>
+      />
     );
   }
 }
